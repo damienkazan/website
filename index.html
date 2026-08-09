@@ -3,452 +3,32 @@
 
 <head>
 
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Damien Kazan | Trailer Editor</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-
-<style>
-
-/* =======================================
-   PROJECT THUMBNAILS
-======================================= */
-
-.projects-grid .project{
-    aspect-ratio:16 / 9;
-}
-
-.projects-grid .project img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.projects-grid .project-overlay h3{
-    display:none;
-}
-
-
-/* =======================================
-   ABOUT
-======================================= */
-
-.about-contact{
-    margin-top:35px;
-    text-align:center;
-}
-
-.about > .section-title{
-    text-align:center;
-}
-
-.about-content{
-    max-width:800px;
-    margin:0 auto;
-    text-align:center;
-}
-
-.about-content p + p{
-    margin-top:28px;
-}
-
-.profile-photo{
-    width:120px !important;
-    height:120px !important;
-    object-fit:cover !important;
-    border-radius:50% !important;
-    margin:0 auto 35px auto !important;
-}
-
-
-/* =======================================
-   NAVIGATION
-======================================= */
-
-.site-nav,
-nav{
-    position:fixed !important;
-
-    top:0 !important;
-    left:0 !important;
-
-    width:100% !important;
-    height:76px !important;
-
-    display:flex !important;
-    align-items:center !important;
-    justify-content:space-between !important;
-
-    padding:0 8% !important;
-
-    box-sizing:border-box;
-
-    z-index:10000 !important;
-
-    background:rgba(5,5,5,.75) !important;
-
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-}
-
-.site-nav .logo,
-nav .logo{
-    display:block !important;
-    visibility:visible !important;
-    opacity:1 !important;
-    flex-shrink:0;
-}
-
-.site-nav .menu,
-nav .menu{
-    display:flex !important;
-    visibility:visible !important;
-    opacity:1 !important;
-
-    align-items:center !important;
-
-    position:absolute !important;
-
-    right:8% !important;
-    top:0 !important;
-
-    height:76px !important;
-
-    margin:0 !important;
-    padding:0 !important;
-}
-
-.site-nav .menu a,
-nav .menu a{
-    display:block !important;
-
-    visibility:visible !important;
-    opacity:1 !important;
-
-    color:#fff !important;
-
-    font-size:16px !important;
-
-    text-decoration:none !important;
-
-    white-space:nowrap !important;
-}
-
-
-/* =======================================
-   HERO
-======================================= */
-
-.hero{
-    height:72vh !important;
-
-    min-height:0 !important;
-
-    padding-top:120px !important;
-    padding-bottom:70px !important;
-
-    box-sizing:border-box;
-
-    align-items:flex-start !important;
-}
-
-.hero-content{
-    width:100%;
-}
-
-
-/* =======================================
-   PROJECT SECTION
-======================================= */
-
-#projects{
-    padding-top:0 !important;
-}
-
-#projects .section-title{
-    margin-bottom:35px;
-}
-
-
-/* =======================================
-   CONTACT FORM
-======================================= */
-
-.contact-section{
-    padding-top:120px;
-    padding-bottom:120px;
-}
-
-.contact-section .section-title{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.contact-content{
-    max-width:700px;
-    margin:0 auto;
-    text-align:center;
-}
-
-.contact-content h2{
-    font-size:52px;
-    line-height:1.05;
-    margin-bottom:20px;
-}
-
-.contact-content > p{
-    color:#bcbcbc;
-    line-height:1.7;
-    margin-bottom:45px;
-}
-
-.contact-form{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    text-align:left;
-}
-
-.contact-form label{
-    font-size:13px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:#999;
-}
-
-.contact-form input,
-.contact-form textarea{
-    width:100%;
-
-    padding:17px 18px;
-
-    margin-top:8px;
-
-    background:#0b0b0b;
-
-    color:#fff;
-
-    border:1px solid #333;
-
-    border-radius:4px;
-
-    font-family:'Inter',sans-serif;
-
-    font-size:16px;
-
-    outline:none;
-
-    transition:.25s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus{
-    border-color:#fff;
-}
-
-.contact-form textarea{
-    min-height:170px;
-    resize:vertical;
-}
-
-.contact-form button{
-    align-self:center;
-
-    margin-top:15px;
-
-    padding:18px 44px;
-
-    background:transparent;
-
-    color:#fff;
-
-    border:1px solid #fff;
-
-    cursor:pointer;
-
-    font-family:'Inter',sans-serif;
-
-    font-size:14px;
-
-    letter-spacing:1px;
-
-    transition:.35s;
-}
-
-.contact-form button:hover{
-    background:#fff;
-    color:#000;
-}
-
-
-/* =======================================
-   FOOTER
-======================================= */
-
-footer{
-    padding:45px 20px;
-    text-align:center;
-    color:#777;
-}
-
-
-/* =======================================
-   MOBILE
-======================================= */
-
-@media(max-width:900px){
-
-    .hero h1{
-        font-size:54px;
-    }
-
-    .grid{
-        grid-template-columns:1fr;
-    }
-
-    .featured-card{
-        grid-template-columns:1fr;
-    }
-
-}
-
-
-/* =======================================
-   MOBILE SPACING + NAV
-======================================= */
-
-@media(max-width:600px){
-
-    .site-nav,
-    nav{
-        height:76px !important;
-
-        padding-left:8% !important;
-        padding-right:8% !important;
-
-        display:flex !important;
-    }
-
-    .site-nav .logo,
-    nav .logo{
-        display:block !important;
-    }
-
-    .site-nav .menu,
-    nav .menu{
-        display:flex !important;
-
-        visibility:visible !important;
-        opacity:1 !important;
-
-        position:absolute !important;
-
-        right:8% !important;
-        top:0 !important;
-
-        height:76px !important;
-
-        align-items:center !important;
-    }
-
-    .site-nav .menu a,
-    nav .menu a{
-        display:block !important;
-
-        visibility:visible !important;
-        opacity:1 !important;
-
-        font-size:16px !important;
-
-        color:#fff !important;
-    }
-
-
-    .hero{
-        min-height:0 !important;
-
-        height:auto !important;
-
-        padding-top:150px !important;
-        padding-bottom:70px !important;
-
-        align-items:flex-start !important;
-    }
-
-    .hero-content{
-        width:100%;
-    }
-
-    .hero h1{
-        font-size:54px !important;
-
-        line-height:.98 !important;
-
-        margin-bottom:42px !important;
-    }
-
-    .subtitle{
-        font-size:22px !important;
-
-        line-height:1.3 !important;
-
-        margin-top:0 !important;
-    }
-
-
-    #projects{
-        padding-top:0 !important;
-    }
-
-    #projects .section-title{
-        margin-bottom:45px !important;
-    }
-
-
-    .contact-section{
-        padding-top:90px;
-        padding-bottom:80px;
-    }
-
-    .contact-content h2{
-        font-size:42px;
-    }
-
-    .contact-content > p{
-        font-size:16px;
-    }
-
-}
-
-
-/* =======================================
-   VERY SMALL PHONES
-======================================= */
-
-@media(max-width:390px){
-
-    .hero h1{
-        font-size:48px !important;
-    }
-
-    .subtitle{
-        font-size:20px !important;
-    }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Damien Kazan | Trailer Editor</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
 
 </head>
 
@@ -456,9 +36,9 @@ footer{
 <body>
 
 
-<!-- =====================================
+<!-- =======================================
      NAVIGATION
-===================================== -->
+======================================= -->
 
 <nav class="site-nav">
 
@@ -477,19 +57,29 @@ footer{
 </nav>
 
 
-<!-- =====================================
+
+<!-- =======================================
      HERO
-===================================== -->
+======================================= -->
 
 <section class="hero">
 
-    <div class="overlay"></div>
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+    >
 
-    <video autoplay muted loop playsinline>
-
-        <source src="hero.mp4" type="video/mp4">
+        <source
+            src="hero.mp4"
+            type="video/mp4"
+        >
 
     </video>
+
+
+    <div class="overlay"></div>
 
 
     <div class="hero-content">
@@ -498,9 +88,11 @@ footer{
             TRAILER EDITOR
         </p>
 
+
         <h1>
             Crafting Cinematic Trailers &amp; Motion Posters
         </h1>
+
 
         <p class="subtitle">
             Trailer Editing • Motion Posters
@@ -511,11 +103,15 @@ footer{
 </section>
 
 
-<!-- =====================================
-     WORK
-===================================== -->
 
-<section id="projects" class="projects-grid">
+<!-- =======================================
+     WORK
+======================================= -->
+
+<section
+    id="projects"
+    class="projects-grid"
+>
 
     <div class="section-title">
         Work
@@ -526,227 +122,452 @@ footer{
 
 
         <div class="project">
-            <img src="1.png" alt="Trailer project">
+
+            <img
+                src="1.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="2.png" alt="Trailer project">
+
+            <img
+                src="2.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="3.webp" alt="Trailer project">
+
+            <img
+                src="3.webp"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="4.webp" alt="Trailer project">
+
+            <img
+                src="4.webp"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="5.png" alt="Trailer project">
+
+            <img
+                src="5.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="6.png" alt="Trailer project">
+
+            <img
+                src="6.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="7.png" alt="Trailer project">
+
+            <img
+                src="7.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="8.png" alt="Trailer project">
+
+            <img
+                src="8.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="9.png" alt="Trailer project">
+
+            <img
+                src="9.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="10.png" alt="Trailer project">
+
+            <img
+                src="10.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="11.png" alt="Trailer project">
+
+            <img
+                src="11.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="12.png" alt="Trailer project">
+
+            <img
+                src="12.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="13.jpg" alt="Trailer project">
+
+            <img
+                src="13.jpg"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="14.png" alt="Trailer project">
+
+            <img
+                src="14.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="15.webp" alt="Trailer project">
+
+            <img
+                src="15.webp"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="16.png" alt="Trailer project">
+
+            <img
+                src="16.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="17.png" alt="Trailer project">
+
+            <img
+                src="17.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="18.png" alt="Trailer project">
+
+            <img
+                src="18.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="19.png" alt="Trailer project">
+
+            <img
+                src="19.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="20.png" alt="Trailer project">
+
+            <img
+                src="20.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="21.png" alt="Trailer project">
+
+            <img
+                src="21.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="22.png" alt="Trailer project">
+
+            <img
+                src="22.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="23.png" alt="Trailer project">
+
+            <img
+                src="23.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="24.png" alt="Trailer project">
+
+            <img
+                src="24.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
         <div class="project">
-            <img src="25.png" alt="Trailer project">
+
+            <img
+                src="25.png"
+                alt="Trailer project"
+            >
 
             <div class="project-overlay">
-                <span>Watch</span>
+
+                <span>
+                    Watch
+                </span>
+
             </div>
+
         </div>
 
 
@@ -755,11 +576,15 @@ footer{
 </section>
 
 
-<!-- =====================================
-     ABOUT
-===================================== -->
 
-<section id="about" class="about">
+<!-- =======================================
+     ABOUT
+======================================= -->
+
+<section
+    id="about"
+    class="about"
+>
 
     <div class="section-title">
         About
@@ -782,7 +607,9 @@ footer{
 
 
         <p>
-            I'm Damien Kazan, a video editor focused on cinematic trailers, teasers and motion posters for film, games and entertainment projects.
+            I'm Damien Kazan, a video editor focused on cinematic
+            trailers, teasers and motion posters for film, games
+            and entertainment projects.
         </p>
 
 
@@ -808,92 +635,115 @@ footer{
 </section>
 
 
-<!-- =====================================
-     CONTACT FORM
-===================================== -->
 
-<section id="contact" class="contact-section">
+<!-- =======================================
+     CONTACT
+======================================= -->
+
+<section
+    id="contact"
+    class="contact"
+>
 
     <div class="section-title">
         Contact
     </div>
 
 
-    <div class="contact-content">
-
-        <h2>
-            Let's work together.
-        </h2>
-
-        <p>
-            Have a trailer, teaser or motion poster in mind?
-            Send me a message and I'll get back to you.
-        </p>
+    <h2>
+        Let's work together.
+    </h2>
 
 
-        <form
-            class="contact-form"
-            action="https://formspree.io/f/xqpzpzwy"
-            method="POST"
+    <p>
+        Tell me about your project.
+    </p>
+
+
+    <form
+        class="contact-form"
+        id="contact-form"
+        action="https://formspree.io/f/xqpzpzwy"
+        method="POST"
+    >
+
+
+        <label for="name">
+
+            Name
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+            >
+
+        </label>
+
+
+        <label for="email">
+
+            Email
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+            >
+
+        </label>
+
+
+        <label for="message">
+
+            Message
+
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Tell me about your project..."
+                required
+            ></textarea>
+
+        </label>
+
+
+        <button type="submit">
+            SEND MESSAGE
+        </button>
+
+
+        <div
+            id="form-success"
+            class="form-success"
+            aria-live="polite"
         >
+            Message sent.
+        </div>
 
 
-            <label for="name">
-                Name
-
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    required
-                >
-
-            </label>
+        <div
+            id="form-error"
+            class="form-error"
+            aria-live="polite"
+        >
+            Something went wrong. Please try again.
+        </div>
 
 
-            <label for="email">
-                Email
-
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="your@email.com"
-                    required
-                >
-
-            </label>
-
-
-            <label for="message">
-                Message
-
-                <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Tell me about your project..."
-                    required
-                ></textarea>
-
-            </label>
-
-
-            <button type="submit">
-                SEND MESSAGE
-            </button>
-
-
-        </form>
-
-    </div>
+    </form>
 
 </section>
 
 
-<!-- =====================================
+
+<!-- =======================================
      FOOTER
-===================================== -->
+======================================= -->
 
 <footer>
 
@@ -904,7 +754,98 @@ footer{
 </footer>
 
 
+
+<!-- =======================================
+     JAVASCRIPT
+======================================= -->
+
 <script src="script.js"></script>
+
+
+<script>
+
+const contactForm = document.getElementById("contact-form");
+
+const successMessage =
+    document.getElementById("form-success");
+
+const errorMessage =
+    document.getElementById("form-error");
+
+
+contactForm.addEventListener(
+    "submit",
+    async function(event){
+
+        event.preventDefault();
+
+
+        const submitButton =
+            contactForm.querySelector("button");
+
+
+        submitButton.disabled = true;
+
+        submitButton.textContent = "SENDING...";
+
+
+        successMessage.style.display = "none";
+
+        errorMessage.style.display = "none";
+
+
+        const formData =
+            new FormData(contactForm);
+
+
+        try {
+
+            const response =
+                await fetch(
+                    contactForm.action,
+                    {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                            "Accept": "application/json"
+                        }
+                    }
+                );
+
+
+            if(response.ok){
+
+                contactForm.reset();
+
+                successMessage.style.display = "block";
+
+                submitButton.textContent =
+                    "MESSAGE SENT";
+
+            } else {
+
+                throw new Error(
+                    "Form submission failed"
+                );
+
+            }
+
+
+        } catch(error){
+
+            errorMessage.style.display = "block";
+
+            submitButton.disabled = false;
+
+            submitButton.textContent =
+                "SEND MESSAGE";
+
+        }
+
+    }
+);
+
+</script>
 
 
 </body>
