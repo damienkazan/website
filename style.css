@@ -1,5 +1,5 @@
 /* =======================================
-   DK PORTFOLIO V2
+DK PORTFOLIO V2
 ======================================= */
 
 *{
@@ -34,27 +34,19 @@ section{
 }
 
 
-/* =======================================
-   NAVIGATION
-======================================= */
+/* ---------------- NAV ---------------- */
 
-.site-nav{
+nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    height:68px;
-
-    padding:0 8%;
-
+    padding:28px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     z-index:1000;
-
-    background:rgba(5,5,5,.75);
-
+    background:rgba(5,5,5,.18);
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
 }
@@ -67,155 +59,164 @@ section{
 
 .menu{
     display:flex;
-    align-items:center;
     gap:40px;
 }
 
 .menu a{
     color:#d4d4d4;
-    font-size:16px;
     transition:.35s;
 }
 
 .menu a:hover{
-    color:#fff;
+    color:white;
 }
 
 
-/* =======================================
-   HERO
-======================================= */
+/* ---------------- HERO ---------------- */
 
 .hero{
     position:relative;
-
-    min-height:100vh;
-
+    height:100vh;
     display:flex;
     align-items:center;
-
-    padding-top:110px;
-    padding-bottom:100px;
 }
 
 .hero video{
     position:absolute;
-
     inset:0;
-
     width:100%;
     height:100%;
-
     object-fit:cover;
-
-    z-index:0;
 }
 
 .overlay{
     position:absolute;
-
     inset:0;
-
     background:linear-gradient(
         rgba(0,0,0,.45),
         rgba(0,0,0,.92)
     );
-
-    z-index:1;
 }
 
 .hero-content{
     position:relative;
-
     z-index:5;
-
     max-width:760px;
 }
 
 .eyebrow{
     color:#9b9b9b;
-
     letter-spacing:8px;
-
     margin-bottom:25px;
-
     font-size:13px;
 }
 
 .hero h1{
     font-size:92px;
-
     line-height:1;
-
     font-weight:800;
-
     margin-bottom:28px;
 }
 
 .subtitle{
     font-size:22px;
-
-    line-height:1.3;
-
     color:#cfcfcf;
 }
 
+.scroll-indicator{
+    margin-top:70px;
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    font-size:30px;
+    animation:float 2s infinite;
+}
 
-/* =======================================
-   SECTION TITLES
-======================================= */
+.scroll-indicator span{
+    font-size:13px;
+    letter-spacing:3px;
+    color:#9b9b9b;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(10px);
+    }
+}
+
+
+/* ------------ SECTION TITLE ---------- */
 
 .section-title{
     font-size:13px;
-
     letter-spacing:5px;
-
     color:#8b8b8b;
-
     text-transform:uppercase;
-
     margin-bottom:50px;
 }
 
 
-/* =======================================
-   WORK
-======================================= */
+/* -------- FEATURED PROJECT ---------- */
 
-.projects-grid{
-    padding-top:90px;
+.featured-card{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:60px;
+    align-items:center;
 }
 
-.projects-grid .section-title{
-    margin-bottom:50px;
+.featured-image{
+    overflow:hidden;
+    border-radius:18px;
 }
+
+.featured-image img{
+    transition:.6s;
+}
+
+.featured-image:hover img{
+    transform:scale(1.05);
+}
+
+.featured-info h2{
+    font-size:54px;
+    margin-bottom:20px;
+}
+
+.featured-info p{
+    color:#bcbcbc;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.featured-info a{
+    border-bottom:1px solid white;
+    padding-bottom:6px;
+}
+
+
+/* -------- GRID ---------- */
 
 .grid{
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:30px;
 }
 
 .project{
     position:relative;
-
     overflow:hidden;
-
     border-radius:18px;
-
     cursor:pointer;
-
-    aspect-ratio:16 / 9;
 }
 
 .project img{
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
     transition:.45s;
 }
 
@@ -225,17 +226,11 @@ section{
 
 .project-overlay{
     position:absolute;
-
     inset:0;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:flex-end;
-
     padding:30px;
-
     background:linear-gradient(
         transparent,
         rgba(0,0,0,.82)
@@ -248,311 +243,152 @@ section{
 
 .project-overlay span{
     margin-top:10px;
-
     color:#ddd;
 }
 
 
-/* =======================================
-   ABOUT
-======================================= */
-
-.about{
-    padding-top:120px;
-    padding-bottom:120px;
-
-    text-align:center;
-}
-
-.about > .section-title{
-    text-align:center;
-}
+/* -------- ABOUT ---------- */
 
 .about-content{
-    width:100%;
-    max-width:800px;
-
-    margin:0 auto;
-
-    text-align:center;
-}
-
-.profile-photo{
-    width:130px;
-    height:130px;
-
-    object-fit:cover;
-
-    border-radius:50%;
-
-    margin:0 auto 40px;
+    max-width:700px;
 }
 
 .about-content h2{
     font-size:48px;
-
-    line-height:1.1;
-
     margin-bottom:25px;
 }
 
 .about-content p{
     color:#c4c4c4;
-
     line-height:1.9;
-
-    margin-bottom:20px;
-}
-
-.about-contact{
-    margin-top:35px;
-
-    text-align:center;
 }
 
 
-/* =======================================
-   CONTACT BUTTON
-======================================= */
-
-.contact-button{
-    border:1px solid #fff;
-
-    padding:18px 44px;
-
-    display:inline-block;
-
-    transition:.35s;
-}
-
-.contact-button:hover{
-    background:#fff;
-
-    color:#000;
-}
-
-
-/* =======================================
-   CONTACT SECTION
-======================================= */
+/* -------- CONTACT ---------- */
 
 .contact{
-    text-align:center;
-
-    padding-top:120px;
-    padding-bottom:120px;
-}
-
-.contact > .section-title{
     text-align:center;
 }
 
 .contact h2{
     font-size:58px;
-
-    line-height:1.1;
-
     margin-bottom:25px;
 }
 
 .contact p{
     color:#cfcfcf;
-
     margin-bottom:40px;
 }
 
+.contact-button{
+    border:1px solid white;
+    padding:18px 44px;
+    display:inline-block;
+    transition:.35s;
+}
 
-/* =======================================
-   CONTACT FORM
-======================================= */
+.contact-button:hover{
+    background:white;
+    color:black;
+}
+
+
+/* -------- CONTACT FORM ---------- */
 
 .contact-form{
-    width:100% !important;
-    max-width:700px !important;
-
-    margin:50px auto 0 !important;
-
-    display:flex !important;
-
-    flex-direction:column !important;
-
-    align-items:stretch !important;
-
-    gap:25px !important;
-
-    text-align:left !important;
+    width:min(700px,100%);
+    margin:50px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    text-align:left;
 }
 
 .contact-form label{
-    width:100% !important;
-
-    display:flex !important;
-
-    flex-direction:column !important;
-
-    gap:10px !important;
-
-    color:#d4d4d4;
-
-    font-size:14px;
-
-    letter-spacing:1px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    color:#ddd;
+    font-size:15px;
 }
 
 .contact-form input,
 .contact-form textarea{
-    display:block !important;
-
-    width:100% !important;
-
-    height:auto;
-
-    padding:17px 18px !important;
-
-    border:1px solid #333 !important;
-
-    border-radius:0 !important;
-
-    background:#0b0b0b !important;
-
-    color:#fff !important;
-
-    font-family:'Inter',sans-serif !important;
-
-    font-size:16px !important;
-
-    line-height:1.4;
-
+    width:100%;
+    background:#080808;
+    color:white;
+    border:1px solid #333;
+    padding:18px;
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    border-radius:0;
     outline:none;
-
-    appearance:none;
-    -webkit-appearance:none;
-
-    transition:.3s;
-}
-
-.contact-form input{
-    min-height:54px;
-}
-
-.contact-form textarea{
-    min-height:180px !important;
-
-    resize:vertical;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus{
-    border-color:#aaa !important;
+    border-color:#777;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder{
-    color:#666;
+.contact-form textarea{
+    min-height:180px;
+    resize:vertical;
 }
 
 .contact-form button{
-    display:inline-block !important;
-
-    width:auto !important;
-
-    align-self:flex-start !important;
-
-    border:1px solid #fff !important;
-
-    background:transparent !important;
-
-    color:#fff !important;
-
-    padding:18px 44px !important;
-
-    font-family:'Inter',sans-serif !important;
-
-    font-size:14px !important;
-
-    letter-spacing:1px;
-
+    width:100%;
+    border:1px solid white;
+    background:white;
+    color:black;
+    padding:18px 30px;
+    font-family:'Inter',sans-serif;
+    font-size:14px;
+    font-weight:600;
     cursor:pointer;
-
     transition:.35s;
 }
 
 .contact-form button:hover{
-    background:#fff !important;
-
-    color:#000 !important;
+    background:#050505;
+    color:white;
 }
 
-.contact-form button:disabled{
-    opacity:.6;
-
-    cursor:default;
+.form-success,
+.form-error{
+    text-align:center;
+    margin-top:5px;
+    display:none;
 }
 
 .form-success{
-    display:none;
-
-    width:100%;
-
-    margin-top:0;
-
     color:#fff;
-
-    font-size:15px;
-
-    letter-spacing:1px;
-
-    text-align:left;
 }
 
 .form-error{
-    display:none;
-
-    width:100%;
-
-    margin-top:0;
-
-    color:#ff8a8a;
-
-    font-size:15px;
-
-    text-align:left;
+    color:#aaa;
 }
 
 
-/* =======================================
-   FOOTER
-======================================= */
+/* -------- FOOTER ---------- */
 
 footer{
     padding:45px 20px;
-
     text-align:center;
-
     color:#777;
 }
 
 
-/* =======================================
-   TABLET
-======================================= */
+/* -------- MOBILE ---------- */
 
 @media(max-width:900px){
 
-    section{
-        padding:100px 8%;
-    }
-
     .hero h1{
         font-size:54px;
-
-        line-height:.98;
-
-        margin-bottom:40px;
+        margin-bottom:45px;
     }
 
     .subtitle{
-        font-size:22px;
+        margin-top:0;
     }
 
     .grid{
@@ -563,243 +399,92 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .about-content h2{
-        font-size:40px;
-    }
-
-    .contact h2{
-        font-size:46px;
+    .menu{
+        display:none;
     }
 }
 
 
-/* =======================================
-   MOBILE
-======================================= */
+/* -------- MOBILE SPACING FIX ---------- */
 
 @media(max-width:600px){
 
-    /* ---------- NAV ---------- */
-
-    .site-nav{
-        height:86px;
-
-        padding:0 8%;
-
-        display:flex;
-
-        flex-direction:row;
-
-        justify-content:space-between;
-
-        align-items:center;
-    }
-
-    .logo{
-        font-size:20px;
-
-        letter-spacing:6px;
-    }
-
-    .menu{
-        display:flex;
-
-        margin-left:auto;
-    }
-
-    .menu a{
-        display:block;
-
-        color:#fff;
-
-        font-size:16px;
-
-        white-space:nowrap;
-    }
-
-
-    /* ---------- HERO ---------- */
-
     .hero{
         min-height:0;
-
         height:auto;
-
         padding-top:150px;
-
-        padding-bottom:75px;
-
+        padding-bottom:90px;
         align-items:flex-start;
     }
 
     .hero-content{
         width:100%;
-
-        max-width:none;
-    }
-
-    .eyebrow{
-        font-size:13px;
-
-        letter-spacing:8px;
-
-        margin-bottom:25px;
     }
 
     .hero h1{
         font-size:54px;
-
         line-height:.98;
-
         margin-bottom:45px;
     }
 
     .subtitle{
         font-size:22px;
-
         line-height:1.3;
-
-        margin:0;
+        margin-top:0;
     }
 
-
-    /* ---------- WORK ---------- */
-
     #projects{
-        padding-top:0;
-
-        padding-bottom:90px;
+        padding-top:80px;
     }
 
     #projects .section-title{
         margin-bottom:45px;
     }
-
-    .grid{
-        grid-template-columns:1fr;
-
-        gap:30px;
-    }
-
-    .project{
-        width:100%;
-
-        aspect-ratio:16 / 9;
-    }
+}
 
 
-    /* ---------- ABOUT ---------- */
+/* -------- ABOUT / CONTACT SPACING FIX ---------- */
+
+.about{
+    padding-bottom:30px;
+}
+
+.contact{
+    padding-top:30px;
+}
+
+
+/* -------- MOBILE CONTACT SPACING ---------- */
+
+@media(max-width:600px){
 
     .about{
-        padding-top:90px;
-
-        padding-bottom:90px;
-
-        text-align:center;
+        padding-top:80px;
+        padding-bottom:20px;
     }
-
-    .about-content{
-        width:100%;
-
-        max-width:800px;
-
-        margin:0 auto;
-
-        text-align:center;
-    }
-
-    .profile-photo{
-        width:110px;
-
-        height:110px;
-
-        margin:0 auto 30px;
-    }
-
-    .about-content h2{
-        font-size:36px;
-
-        line-height:1.1;
-    }
-
-    .about-contact{
-        text-align:center;
-    }
-
-
-    /* ---------- CONTACT ---------- */
 
     .contact{
-        padding-top:90px;
-
-        padding-bottom:90px;
-
-        text-align:center;
-    }
-
-    .contact h2{
-        font-size:38px;
-
-        line-height:1.1;
+        padding-top:20px;
     }
 
     .contact-form{
-        width:100% !important;
-
-        max-width:100% !important;
-
-        margin:40px auto 0 !important;
-
-        display:flex !important;
-
-        flex-direction:column !important;
-
-        gap:22px !important;
-    }
-
-    .contact-form label{
-        width:100% !important;
-
-        display:flex !important;
-
-        flex-direction:column !important;
+        width:100%;
+        margin-top:40px;
     }
 
     .contact-form input,
     .contact-form textarea{
-        width:100% !important;
-
-        font-size:16px !important;
-
-        padding:16px !important;
-    }
-
-    .contact-form input{
-        min-height:54px;
+        width:100%;
+        font-size:16px;
+        padding:18px;
     }
 
     .contact-form textarea{
-        min-height:160px !important;
+        min-height:160px;
     }
 
     .contact-form button{
-        width:100% !important;
-
-        align-self:stretch !important;
-
-        text-align:center;
+        width:100%;
+        padding:18px;
     }
-
-    .form-success,
-    .form-error{
-        text-align:center;
-    }
-
-
-    /* ---------- FOOTER ---------- */
-
-    footer{
-        padding:45px 20px;
-    }
-
 }
