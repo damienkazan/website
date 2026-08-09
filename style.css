@@ -1,5 +1,5 @@
 /* =======================================
-   DK PORTFOLIO V2
+   DK PORTFOLIO
 ======================================= */
 
 * {
@@ -44,7 +44,9 @@ nav {
     left: 0;
     width: 100%;
 
-    padding: 28px 8%;
+    height: 60px;
+
+    padding: 0 8%;
 
     display: flex;
     justify-content: space-between;
@@ -88,15 +90,17 @@ nav {
 
     /*
        Desktop :
-       hauteur réduite pour rapprocher WORK
-       du contenu du HERO.
+       compromis entre l'ancien espace
+       trop grand et les 500px trop courts.
     */
-    height: 500px;
+    height: 650px;
 
     min-height: 0;
 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+
+    padding-top: 115px;
 
     background: #050505;
 }
@@ -583,6 +587,8 @@ footer {
         height: auto;
 
         min-height: 68vh;
+
+        padding-top: 110px;
     }
 
     .hero h1 {
@@ -626,6 +632,8 @@ footer {
         left: 0;
 
         width: 100%;
+
+        height: auto;
 
         padding: 28px 8%;
 
