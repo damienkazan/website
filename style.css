@@ -425,14 +425,14 @@ nav {
 #about .about-content > img.profile-photo {
     display: block;
 
-    width: 108px !important;
-    height: 108px !important;
+    width: 132px !important;
+    height: 132px !important;
 
-    min-width: 108px !important;
-    min-height: 108px !important;
+    min-width: 132px !important;
+    min-height: 132px !important;
 
-    max-width: 108px !important;
-    max-height: 108px !important;
+    max-width: 132px !important;
+    max-height: 132px !important;
 
     object-fit: cover;
 
