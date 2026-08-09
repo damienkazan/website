@@ -86,11 +86,8 @@ nav {
 .hero {
     position: relative;
 
-    /*
-       Hauteur volontairement réduite
-       pour rapprocher WORK du contenu HERO.
-    */
-    height: 48vh;
+    /* Réduit l'espace entre le HERO et WORK */
+    height: 38vh;
 
     display: flex;
     align-items: center;
@@ -201,7 +198,7 @@ nav {
 
     text-transform: uppercase;
 
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 
@@ -211,7 +208,6 @@ nav {
 
 #projects {
     padding-top: 35px;
-
     padding-bottom: 80px;
 
     background: #050505;
@@ -332,7 +328,6 @@ nav {
     text-align: center;
 
     padding-top: 60px;
-
     padding-bottom: 35px;
 
     background: #050505;
@@ -413,7 +408,6 @@ nav {
     text-align: center;
 
     padding-top: 0;
-
     padding-bottom: 120px;
 
     background: #050505;
@@ -613,7 +607,6 @@ footer {
 ======================================= */
 
 @media (max-width: 600px) {
-
 
     /* -----------------------------------
        NAV
