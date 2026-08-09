@@ -249,6 +249,12 @@ nav{
 
 /* -------- ABOUT ---------- */
 
+.about{
+    padding-top:120px;
+    padding-bottom:0;
+    margin:0;
+}
+
 .about-content{
     max-width:700px;
 }
@@ -263,11 +269,18 @@ nav{
     line-height:1.9;
 }
 
+.about-content p:last-child{
+    margin-bottom:0;
+}
+
 
 /* -------- CONTACT ---------- */
 
 .contact{
     text-align:center;
+    padding-top:40px;
+    padding-bottom:120px;
+    margin:0;
 }
 
 .contact h2{
@@ -440,31 +453,31 @@ footer{
     #projects .section-title{
         margin-bottom:45px;
     }
-}
 
 
-/* -------- ABOUT / CONTACT SPACING FIX ---------- */
-
-.about{
-    padding-bottom:30px;
-}
-
-.contact{
-    padding-top:30px;
-}
-
-
-/* -------- MOBILE CONTACT SPACING ---------- */
-
-@media(max-width:600px){
+    /* ABOUT */
 
     .about{
-        padding-top:80px;
-        padding-bottom:20px;
+        padding-top:80px !important;
+        padding-bottom:0 !important;
+        margin:0 !important;
     }
 
+    .about-content{
+        margin:0;
+    }
+
+
+    /* CONTACT */
+
     .contact{
-        padding-top:20px;
+        padding-top:30px !important;
+        padding-bottom:90px !important;
+        margin:0 !important;
+    }
+
+    .contact h2{
+        margin-top:0;
     }
 
     .contact-form{
@@ -486,5 +499,26 @@ footer{
     .contact-form button{
         width:100%;
         padding:18px;
+    }
+}
+
+
+/* -------- FINAL ABOUT / CONTACT GAP FIX ---------- */
+
+/*
+   The About section ends directly before Contact.
+   No large section padding is allowed between them.
+*/
+
+.about + .contact{
+    margin-top:0 !important;
+    padding-top:40px !important;
+}
+
+@media(max-width:600px){
+
+    .about + .contact{
+        margin-top:0 !important;
+        padding-top:30px !important;
     }
 }
