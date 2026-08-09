@@ -43,13 +43,17 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+
     padding: 28px 8%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     z-index: 1000;
 
     background: #050505;
+
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
 }
@@ -83,10 +87,10 @@ nav {
     position: relative;
 
     /*
-       Réduit l'espace vertical avant WORK
-       sur ordinateur.
+       Hauteur volontairement réduite
+       pour rapprocher WORK du contenu HERO.
     */
-    height: 62vh;
+    height: 48vh;
 
     display: flex;
     align-items: center;
@@ -123,20 +127,27 @@ nav {
 
 .eyebrow {
     color: #9b9b9b;
+
     letter-spacing: 8px;
+
     margin-bottom: 25px;
+
     font-size: 13px;
 }
 
 .hero h1 {
     font-size: 92px;
+
     line-height: 1;
+
     font-weight: 800;
+
     margin-bottom: 28px;
 }
 
 .subtitle {
     font-size: 22px;
+
     color: #cfcfcf;
 }
 
@@ -144,7 +155,9 @@ nav {
     margin-top: 70px;
 
     display: inline-flex;
+
     flex-direction: column;
+
     align-items: center;
 
     gap: 8px;
@@ -156,7 +169,9 @@ nav {
 
 .scroll-indicator span {
     font-size: 13px;
+
     letter-spacing: 3px;
+
     color: #9b9b9b;
 }
 
@@ -179,8 +194,11 @@ nav {
 
 .section-title {
     font-size: 13px;
+
     letter-spacing: 5px;
+
     color: #8b8b8b;
+
     text-transform: uppercase;
 
     margin-bottom: 50px;
@@ -192,10 +210,6 @@ nav {
 ======================================= */
 
 #projects {
-    /*
-       Espace réduit au-dessus de WORK
-       sur ordinateur.
-    */
     padding-top: 35px;
 
     padding-bottom: 80px;
@@ -205,7 +219,9 @@ nav {
 
 .grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 30px;
 }
 
@@ -232,7 +248,9 @@ nav {
     inset: 0;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: flex-end;
 
     padding: 30px;
@@ -249,6 +267,7 @@ nav {
 
 .project-overlay span {
     margin-top: 10px;
+
     color: #ddd;
 }
 
@@ -269,6 +288,7 @@ nav {
 
 .featured-image {
     overflow: hidden;
+
     border-radius: 18px;
 }
 
@@ -282,17 +302,21 @@ nav {
 
 .featured-info h2 {
     font-size: 54px;
+
     margin-bottom: 20px;
 }
 
 .featured-info p {
     color: #bcbcbc;
+
     line-height: 1.8;
+
     margin-bottom: 35px;
 }
 
 .featured-info a {
     border-bottom: 1px solid white;
+
     padding-bottom: 6px;
 }
 
@@ -308,6 +332,7 @@ nav {
     text-align: center;
 
     padding-top: 60px;
+
     padding-bottom: 35px;
 
     background: #050505;
@@ -315,6 +340,7 @@ nav {
 
 .about-content {
     width: 100%;
+
     max-width: 900px;
 
     margin: 0 auto;
@@ -340,6 +366,7 @@ nav {
     max-height: 108px !important;
 
     object-fit: cover;
+
     object-position: center;
 
     border-radius: 50%;
@@ -354,6 +381,7 @@ nav {
 
 .about-content h2 {
     font-size: 48px;
+
     line-height: 1.15;
 
     margin-bottom: 25px;
@@ -385,6 +413,7 @@ nav {
     text-align: center;
 
     padding-top: 0;
+
     padding-bottom: 120px;
 
     background: #050505;
@@ -392,6 +421,7 @@ nav {
 
 .contact h2 {
     font-size: 58px;
+
     line-height: 1.1;
 
     margin-bottom: 25px;
@@ -410,11 +440,13 @@ nav {
 
 .contact-form {
     width: 100%;
+
     max-width: 580px;
 
     margin: 0 auto;
 
     display: flex;
+
     flex-direction: column;
 
     gap: 24px;
@@ -424,6 +456,7 @@ nav {
 
 .contact-form label {
     display: flex;
+
     flex-direction: column;
 
     gap: 10px;
@@ -488,11 +521,13 @@ nav {
     border: 1px solid #fff;
 
     background: #fff;
+
     color: #000;
 
     font-family: 'Inter', sans-serif;
 
     font-size: 14px;
+
     font-weight: 600;
 
     cursor: pointer;
@@ -506,6 +541,7 @@ nav {
 
 .contact-form button:hover {
     background: transparent;
+
     color: #fff;
 }
 
@@ -544,11 +580,13 @@ footer {
 
     .hero {
         height: auto;
+
         min-height: 68vh;
     }
 
     .hero h1 {
         font-size: 54px;
+
         margin-bottom: 45px;
     }
 
@@ -594,6 +632,7 @@ footer {
         display: flex;
 
         justify-content: space-between;
+
         align-items: center;
 
         background: #050505;
@@ -601,11 +640,13 @@ footer {
         z-index: 1000;
 
         backdrop-filter: none;
+
         -webkit-backdrop-filter: none;
     }
 
     .logo {
         font-size: 20px;
+
         letter-spacing: 6px;
     }
 
@@ -613,6 +654,7 @@ footer {
         display: flex;
 
         align-items: center;
+
         justify-content: flex-end;
 
         margin-left: auto;
@@ -639,6 +681,7 @@ footer {
         height: auto;
 
         padding-top: 150px;
+
         padding-bottom: 40px;
 
         align-items: flex-start;
@@ -648,6 +691,7 @@ footer {
 
     .hero-content {
         width: 100%;
+
         max-width: 100%;
 
         text-align: center;
@@ -688,6 +732,7 @@ footer {
 
     #projects {
         padding-top: 45px;
+
         padding-bottom: 70px;
 
         background: #050505;
@@ -707,6 +752,7 @@ footer {
         width: 100%;
 
         padding-top: 35px;
+
         padding-bottom: 25px;
 
         text-align: center;
@@ -716,6 +762,7 @@ footer {
 
     .about-content {
         width: 100%;
+
         max-width: 100%;
 
         margin: 0 auto;
@@ -743,6 +790,7 @@ footer {
         aspect-ratio: 1 / 1;
 
         object-fit: cover;
+
         object-position: center;
 
         border-radius: 50%;
@@ -798,6 +846,7 @@ footer {
         width: 100%;
 
         padding-top: 0;
+
         padding-bottom: 70px;
 
         text-align: center;
