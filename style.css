@@ -331,16 +331,21 @@ nav {
     );
 }
 
-/* Degrade plus doux sur les 18 premieres vignettes pour eviter
-   l'effet de bande noire trop marquee sur les images larges/claires.
-   Les 7 dernieres vignettes gardent le degrade d'origine. */
-.grid .project:nth-child(-n+18) .project-overlay {
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, .78) 0%,
-        rgba(0, 0, 0, .35) 28%,
-        rgba(0, 0, 0, 0) 62%
-    );
+/* Ratio uniforme + recadrage sur les 18 premieres vignettes,
+   pour eviter les hauteurs inegales entre formats cinema/16:9.
+   Les 7 dernieres vignettes gardent leur comportement d'origine. */
+.grid .project:nth-child(-n+18) {
+    aspect-ratio: 16 / 9;
+}
+
+.grid .project:nth-child(-n+18) img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
 }
 
 .project-overlay h3 {
