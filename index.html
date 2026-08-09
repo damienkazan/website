@@ -58,6 +58,15 @@
     text-align:center;
 }
 
+/* Profile photo */
+.profile-photo{
+    display:block;
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    margin:0 auto 30px;
+}
+
 /* Compact hero */
 .hero{
     height:55vh !important;
@@ -102,13 +111,23 @@
 @media (max-width:768px){
 
     .site-nav{
-        height:64px;
-        padding:0 8%;
+        height:calc(64px + env(safe-area-inset-top));
+        padding:
+            env(safe-area-inset-top)
+            8%
+            0 8%;
+        align-items:center;
     }
 
     .hero{
-        padding-top:64px;
+        padding-top:calc(64px + env(safe-area-inset-top));
         box-sizing:border-box;
+    }
+
+    .profile-photo{
+        width:100px;
+        height:100px;
+        margin-bottom:25px;
     }
 
 }
@@ -509,6 +528,8 @@ About
 </div>
 
 <div class="about-content">
+
+<img src="profile.png" alt="Damien Kazan" class="profile-photo">
 
 <h2>
 Trailer Editor & Motion Poster Animator
