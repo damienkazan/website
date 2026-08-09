@@ -29,13 +29,10 @@ a {
     text-decoration: none;
 }
 
-/* =======================================
-   SECTIONS
-======================================= */
-
 section {
     padding: 120px 8%;
 }
+
 
 /* =======================================
    NAVIGATION
@@ -53,10 +50,7 @@ nav,
     align-items: center;
     z-index: 1000;
 
-    /* Même noir que le reste du site */
     background: #050505;
-
-    /* On évite le deuxième noir créé par le blur */
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
 }
@@ -81,6 +75,7 @@ nav,
     color: white;
 }
 
+
 /* =======================================
    HERO
 ======================================= */
@@ -88,12 +83,17 @@ nav,
 .hero {
     position: relative;
 
-    /* Un peu moins haut sur desktop
-       pour rapprocher WORK */
-    height: 82vh;
+    /*
+       Hauteur volontairement réduite :
+       évite le grand vide entre le Hero
+       et la section WORK.
+    */
+    height: 72vh;
 
     display: flex;
     align-items: center;
+
+    background: #050505;
 }
 
 .hero video {
@@ -107,9 +107,10 @@ nav,
 .overlay {
     position: absolute;
     inset: 0;
+
     background: linear-gradient(
-        rgba(0, 0, 0, .45),
-        rgba(0, 0, 0, .92)
+        rgba(5, 5, 5, .45),
+        rgba(5, 5, 5, .92)
     );
 }
 
@@ -156,7 +157,8 @@ nav,
 
 @keyframes float {
 
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -164,6 +166,7 @@ nav,
         transform: translateY(10px);
     }
 }
+
 
 /* =======================================
    SECTION TITLE
@@ -177,12 +180,15 @@ nav,
     margin-bottom: 50px;
 }
 
+
 /* =======================================
    WORK / GRID
 ======================================= */
 
 #projects {
-    padding-top: 60px;
+    padding-top: 55px;
+    padding-bottom: 80px;
+    background: #050505;
 }
 
 .grid {
@@ -213,6 +219,7 @@ nav,
     flex-direction: column;
     justify-content: flex-end;
     padding: 30px;
+
     background: linear-gradient(
         transparent,
         rgba(0, 0, 0, .82)
@@ -227,6 +234,7 @@ nav,
     margin-top: 10px;
     color: #ddd;
 }
+
 
 /* =======================================
    FEATURED PROJECT
@@ -268,16 +276,16 @@ nav,
     padding-bottom: 6px;
 }
 
+
 /* =======================================
    ABOUT
 ======================================= */
 
 .about {
     text-align: center;
-
-    /* On garde une section compacte */
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 45px;
+    background: #050505;
 }
 
 .about-content {
@@ -287,35 +295,72 @@ nav,
     text-align: center;
 }
 
-/* PHOTO DE PROFIL
-   Taille fixe pour éviter qu'elle
-   devienne énorme sur iPhone */
-.about-content .profile-photo {
+
+/* ---------------------------------------
+   PROFILE PHOTO
+--------------------------------------- */
+
+.about-content .profile-photo,
+.about-content img.profile-photo {
     display: block;
+
     width: 108px !important;
     height: 108px !important;
+
+    min-width: 108px !important;
+    min-height: 108px !important;
+
     max-width: 108px !important;
     max-height: 108px !important;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+
+    margin: 0 auto 35px;
+}
+
+
+/*
+   Sécurité supplémentaire :
+   si l'image possède une autre classe mais
+   se trouve directement dans about-content,
+   elle ne pourra pas devenir gigantesque.
+*/
+.about-content > img {
+    width: 108px;
+    height: 108px;
+    max-width: 108px;
+    max-height: 108px;
     object-fit: cover;
     border-radius: 50%;
     margin: 0 auto 35px;
 }
 
+
+/* ---------------------------------------
+   ABOUT TEXT
+--------------------------------------- */
+
 .about-content h2 {
     font-size: 48px;
     line-height: 1.15;
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .about-content p {
     color: #c4c4c4;
     line-height: 1.9;
     margin-bottom: 22px;
+    text-align: center;
 }
 
 .about-content p:last-child {
     margin-bottom: 0;
 }
+
 
 /* =======================================
    CONTACT
@@ -323,13 +368,9 @@ nav,
 
 .contact {
     text-align: center;
-
-    /*
-       Pas de gros espace entre About
-       et Contact.
-    */
     padding-top: 0;
     padding-bottom: 120px;
+    background: #050505;
 }
 
 .contact h2 {
@@ -343,6 +384,7 @@ nav,
     margin-bottom: 40px;
 }
 
+
 /* =======================================
    CONTACT FORM
 ======================================= */
@@ -351,9 +393,11 @@ nav,
     width: 100%;
     max-width: 580px;
     margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     gap: 24px;
+
     text-align: left;
 }
 
@@ -361,6 +405,7 @@ nav,
     display: flex;
     flex-direction: column;
     gap: 10px;
+
     color: #dcdcdc;
     font-size: 14px;
 }
@@ -368,15 +413,22 @@ nav,
 .contact-form input,
 .contact-form textarea {
     width: 100%;
+
     background: #080808;
     border: 1px solid #333;
+
     color: #fff;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
+
     padding: 16px;
     border-radius: 0;
+
     outline: none;
-    transition: border-color .3s, background .3s;
+
+    transition:
+        border-color .3s,
+        background .3s;
 }
 
 .contact-form input {
@@ -402,15 +454,21 @@ nav,
 .contact-form button {
     width: 100%;
     min-height: 56px;
+
     border: 1px solid #fff;
+
     background: #fff;
     color: #000;
+
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 600;
+
     cursor: pointer;
+
     padding: 16px 20px;
     text-align: center;
+
     transition: .35s;
 }
 
@@ -437,6 +495,7 @@ nav,
     color: #ff8b8b;
 }
 
+
 /* =======================================
    FOOTER
 ======================================= */
@@ -445,13 +504,20 @@ footer {
     padding: 45px 20px;
     text-align: center;
     color: #777;
+    background: #050505;
 }
+
 
 /* =======================================
    TABLET
 ======================================= */
 
 @media (max-width: 900px) {
+
+    .hero {
+        height: auto;
+        min-height: 68vh;
+    }
 
     .hero h1 {
         font-size: 54px;
@@ -471,9 +537,10 @@ footer {
     }
 
     .menu {
-        display: none;
+        display: flex;
     }
 }
+
 
 /* =======================================
    MOBILE
@@ -485,8 +552,22 @@ footer {
 
     nav,
     .site-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
         padding: 28px 8%;
+
         background: #050505;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        z-index: 1000;
+
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
     }
@@ -496,16 +577,25 @@ footer {
         letter-spacing: 6px;
     }
 
+    /*
+       Contact reste bien à droite de DK
+       sur iPhone.
+    */
     .menu {
         display: flex;
-        gap: 0;
+        align-items: center;
+        justify-content: flex-end;
+
         margin-left: auto;
+        gap: 0;
     }
 
     .menu a {
+        display: block;
         font-size: 18px;
         color: #fff;
     }
+
 
     /* ---------------- HERO ---------------- */
 
@@ -514,87 +604,138 @@ footer {
         height: auto;
 
         padding-top: 150px;
-        padding-bottom: 70px;
+        padding-bottom: 40px;
 
         align-items: flex-start;
+
+        background: #050505;
     }
 
     .hero-content {
         width: 100%;
+        max-width: 100%;
+
         text-align: center;
     }
 
     .eyebrow {
         font-size: 12px;
         letter-spacing: 7px;
-        margin-bottom: 55px;
+        margin-bottom: 45px;
     }
 
     .hero h1 {
         font-size: 54px;
         line-height: .98;
-        margin-bottom: 45px;
+        margin-bottom: 38px;
+
+        text-align: center;
     }
 
     .subtitle {
         font-size: 22px;
         line-height: 1.3;
         margin-top: 0;
+
+        text-align: center;
     }
+
 
     /* ---------------- WORK ---------------- */
 
     #projects {
-        padding-top: 55px;
-        padding-bottom: 80px;
+        padding-top: 45px;
+        padding-bottom: 70px;
+
+        background: #050505;
     }
 
     #projects .section-title {
-        margin-bottom: 45px;
+        margin-bottom: 40px;
     }
+
 
     /* ---------------- ABOUT ---------------- */
 
     #about,
     .about {
-        padding-top: 70px;
-        padding-bottom: 45px;
+        padding-top: 45px;
+        padding-bottom: 35px;
+
         text-align: center;
+
+        background: #050505;
     }
 
     .about-content {
         width: 100%;
         max-width: 100%;
+
         margin: 0 auto;
+
         text-align: center;
     }
 
+
     /*
-       IMPORTANT :
-       On force la photo à rester petite.
+       PHOTO :
+       taille fixe sur iPhone.
+       Elle ne peut plus prendre
+       toute la largeur de l'écran.
     */
-    .about-content .profile-photo {
+
+    .about-content .profile-photo,
+    .about-content img.profile-photo {
         display: block;
+
         width: 88px !important;
         height: 88px !important;
+
+        min-width: 88px !important;
+        min-height: 88px !important;
+
         max-width: 88px !important;
         max-height: 88px !important;
+
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 50%;
+
+        margin: 0 auto 30px;
+    }
+
+    .about-content > img {
+        width: 88px !important;
+        height: 88px !important;
+
+        min-width: 88px !important;
+        min-height: 88px !important;
+
+        max-width: 88px !important;
+        max-height: 88px !important;
+
         object-fit: cover;
         border-radius: 50%;
+
         margin: 0 auto 30px;
     }
 
     .about-content h2 {
         font-size: 42px;
         line-height: 1.12;
+
         margin-bottom: 30px;
+
         text-align: center;
     }
 
     .about-content p {
         font-size: 20px;
         line-height: 1.8;
-        margin-bottom: 30px;
+
+        margin-bottom: 25px;
+
         text-align: center;
     }
 
@@ -602,34 +743,45 @@ footer {
         margin-bottom: 0;
     }
 
+
     /* ---------------- CONTACT ---------------- */
 
     #contact,
     .contact {
         padding-top: 0;
-        padding-bottom: 80px;
+        padding-bottom: 70px;
+
         text-align: center;
+
+        background: #050505;
     }
 
     .contact h2 {
         font-size: 48px;
         line-height: 1.1;
-        margin-bottom: 30px;
+
+        margin-bottom: 25px;
+
         text-align: center;
     }
 
     .contact p {
         font-size: 20px;
         line-height: 1.5;
-        margin-bottom: 45px;
+
+        margin-bottom: 40px;
+
         text-align: center;
     }
 
     .contact-form {
         width: 100%;
         max-width: 100%;
+
         margin: 0 auto;
+
         gap: 25px;
+
         text-align: left;
     }
 
@@ -641,6 +793,7 @@ footer {
     .contact-form input,
     .contact-form textarea {
         width: 100%;
+
         font-size: 18px;
         padding: 18px;
     }
@@ -658,9 +811,11 @@ footer {
         font-size: 15px;
     }
 
+
     /* ---------------- FOOTER ---------------- */
 
     footer {
         padding: 35px 20px;
+        background: #050505;
     }
 }
