@@ -126,12 +126,18 @@
    HERO
 ======================================== */
 
-/* On supprime la grande hauteur inutile */
+/*
+   IMPORTANT :
+   On laisse suffisamment de place au-dessus
+   du contenu pour que la barre fixe DK/Contact
+   ne cache jamais le titre.
+*/
+
 .hero{
     height:auto !important;
     min-height:0 !important;
 
-    padding:105px 8% 45px !important;
+    padding:125px 8% 40px !important;
 
     box-sizing:border-box;
 
@@ -141,6 +147,9 @@
 }
 
 .hero-content{
+    position:relative;
+    z-index:5;
+
     width:100%;
     max-width:760px;
 }
@@ -150,20 +159,22 @@
    HERO SUBTITLE
 ======================================== */
 
-/* Ici on met TRAILER EDITING à l'endroit
-   où était WORK */
-
 .hero .subtitle{
+    display:block !important;
+    visibility:visible !important;
+
+    position:relative;
+    z-index:10;
+
     font-size:22px !important;
     line-height:1.3;
 
-    color:#cfcfcf;
+    color:#cfcfcf !important;
 
-    letter-spacing:0;
+    margin-top:28px !important;
+    margin-bottom:0 !important;
 
-    text-transform:none;
-
-    margin-top:28px;
+    letter-spacing:0 !important;
 }
 
 
@@ -171,38 +182,32 @@
    PROJECTS / WORK
 ======================================== */
 
-/* On cache l'ancien titre WORK pour éviter
-   le doublon */
-
 #projects > .section-title{
-    display:none;
+    display:none !important;
 }
-
-
-/* Le texte qui était WORK est maintenant
-   remplacé par Trailer Editing.
-   
-   Le vrai WORK est placé ici via le HTML
-   ci-dessous. */
-
-
-/* Réduction massive de l'espace avant
-   les projets */
-
-#projects{
-    padding-top:45px !important;
-    padding-bottom:120px !important;
-}
-
-
-/* Titre WORK de la section */
 
 .projects-heading{
+    display:block;
+
     font-size:13px;
     letter-spacing:5px;
+
     color:#8b8b8b;
+
     text-transform:uppercase;
-    margin-bottom:40px;
+
+    margin:0 0 40px 0;
+}
+
+
+/*
+   Petit espace seulement entre le Hero
+   et WORK.
+*/
+
+#projects{
+    padding-top:10px !important;
+    padding-bottom:120px !important;
 }
 
 
@@ -211,6 +216,12 @@
 ======================================== */
 
 @media(max-width:768px){
+
+    /*
+       Barre plus haute sur iPhone.
+       Le contenu commence suffisamment bas
+       pour ne plus être caché.
+    */
 
     .site-nav{
         height:100px;
@@ -222,10 +233,11 @@
         height:auto !important;
         min-height:0 !important;
 
-        padding:145px 8% 30px !important;
+        padding:155px 8% 35px !important;
 
         display:block !important;
     }
+
 
     .hero-content{
         width:100%;
@@ -234,23 +246,25 @@
 
 
     .hero h1{
-        font-size:54px;
-        line-height:.98;
+        font-size:54px !important;
+        line-height:.98 !important;
+
         margin-bottom:0 !important;
     }
 
 
     .hero .subtitle{
+        display:block !important;
+        visibility:visible !important;
+
         font-size:13px !important;
 
-        margin-top:30px;
-
-        letter-spacing:0;
+        margin-top:30px !important;
     }
 
 
     #projects{
-        padding:10px 8% 100px !important;
+        padding:0 8% 100px !important;
     }
 
 
@@ -328,11 +342,10 @@
         </h1>
 
 
-        <!-- TRAILER EDITING reste ici -->
-
         <p class="subtitle">
             Trailer Editing • Motion Posters
         </p>
+
 
     </div>
 
@@ -341,14 +354,11 @@
 
 
 <!-- ========================================
-     PROJECTS
+     WORK / PROJECTS
 ======================================== -->
 
 <section id="projects" class="projects-grid">
 
-
-    <!-- WORK est maintenant à la place
-         de l'ancien Trailer Editing -->
 
     <div class="projects-heading">
         WORK
@@ -359,377 +369,202 @@
 
 
         <div class="project">
-
             <img src="1.png" alt="Project 1">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="2.png" alt="Project 2">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="3.webp" alt="Project 3">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="4.webp" alt="Project 4">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="5.png" alt="Project 5">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="6.png" alt="Project 6">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="7.png" alt="Project 7">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="8.png" alt="Project 8">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="9.png" alt="Project 9">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="10.png" alt="Project 10">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="11.png" alt="Project 11">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="12.png" alt="Project 12">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="13.jpg" alt="Project 13">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="14.png" alt="Project 14">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="15.webp" alt="Project 15">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="16.png" alt="Project 16">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="17.png" alt="Project 17">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="18.png" alt="Project 18">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="19.png" alt="Project 19">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="20.png" alt="Project 20">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="21.png" alt="Project 21">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="22.png" alt="Project 22">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="23.png" alt="Project 23">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="24.png" alt="Project 24">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="25.png" alt="Project 25">
-
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
