@@ -98,14 +98,14 @@ nav {
        le contenu, pour éviter qu'il passe
        sous la navbar.
     */
-    height: 70vh !important;
+    height: auto !important;
     min-height: 0 !important;
 
     display: flex !important;
 
     align-items: flex-start !important;
 
-    padding: 190px 8% 35px !important;
+    padding: 190px 8% 60px !important;
 
     margin: 0 !important;
 
