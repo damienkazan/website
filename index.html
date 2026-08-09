@@ -45,6 +45,7 @@
 
 .about-contact{
     margin-top:35px;
+    text-align:center;
 }
 
 .about > .section-title{
@@ -61,17 +62,12 @@
     margin-top:28px;
 }
 
-.about-contact{
-    text-align:center;
-}
-
-
-/* =======================================
-   SCROLL INDICATOR
-======================================= */
-
-.scroll-indicator{
-    display:none !important;
+.profile-photo{
+    width:120px !important;
+    height:120px !important;
+    object-fit:cover !important;
+    border-radius:50% !important;
+    margin:0 auto 35px auto !important;
 }
 
 
@@ -108,17 +104,14 @@ nav{
 .site-nav .logo,
 nav .logo{
     display:block !important;
-
     visibility:visible !important;
     opacity:1 !important;
-
     flex-shrink:0;
 }
 
 .site-nav .menu,
 nav .menu{
     display:flex !important;
-
     visibility:visible !important;
     opacity:1 !important;
 
@@ -144,9 +137,9 @@ nav .menu a{
 
     color:#fff !important;
 
-    text-decoration:none !important;
-
     font-size:16px !important;
+
+    text-decoration:none !important;
 
     white-space:nowrap !important;
 }
@@ -179,11 +172,134 @@ nav .menu a{
 ======================================= */
 
 #projects{
-    padding-top:80px;
+    padding-top:0 !important;
 }
 
 #projects .section-title{
     margin-bottom:35px;
+}
+
+
+/* =======================================
+   CONTACT FORM
+======================================= */
+
+.contact-section{
+    padding-top:120px;
+    padding-bottom:120px;
+}
+
+.contact-section .section-title{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.contact-content{
+    max-width:700px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.contact-content h2{
+    font-size:52px;
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.contact-content > p{
+    color:#bcbcbc;
+    line-height:1.7;
+    margin-bottom:45px;
+}
+
+.contact-form{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    text-align:left;
+}
+
+.contact-form label{
+    font-size:13px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#999;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+
+    padding:17px 18px;
+
+    margin-top:8px;
+
+    background:#0b0b0b;
+
+    color:#fff;
+
+    border:1px solid #333;
+
+    border-radius:4px;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.25s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#fff;
+}
+
+.contact-form textarea{
+    min-height:170px;
+    resize:vertical;
+}
+
+.contact-form button{
+    align-self:center;
+
+    margin-top:15px;
+
+    padding:18px 44px;
+
+    background:transparent;
+
+    color:#fff;
+
+    border:1px solid #fff;
+
+    cursor:pointer;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+    transition:.35s;
+}
+
+.contact-form button:hover{
+    background:#fff;
+    color:#000;
+}
+
+
+/* =======================================
+   FOOTER
+======================================= */
+
+footer{
+    padding:45px 20px;
+    text-align:center;
+    color:#777;
 }
 
 
@@ -209,12 +325,11 @@ nav .menu a{
 
 
 /* =======================================
-   MOBILE NAVIGATION + SPACING
+   MOBILE SPACING + NAV
 ======================================= */
 
 @media(max-width:600px){
 
-    /* Navigation stays visible */
     .site-nav,
     nav{
         height:76px !important;
@@ -260,7 +375,6 @@ nav .menu a{
     }
 
 
-    /* Hero starts below the fixed navigation */
     .hero{
         min-height:0 !important;
 
@@ -293,13 +407,26 @@ nav .menu a{
     }
 
 
-    /* Work immediately follows the hero */
     #projects{
         padding-top:0 !important;
     }
 
     #projects .section-title{
         margin-bottom:45px !important;
+    }
+
+
+    .contact-section{
+        padding-top:90px;
+        padding-bottom:80px;
+    }
+
+    .contact-content h2{
+        font-size:42px;
+    }
+
+    .contact-content > p{
+        font-size:16px;
     }
 
 }
@@ -319,22 +446,6 @@ nav .menu a{
         font-size:20px !important;
     }
 
-}
-
-
-/* =======================================
-   PROFILE PHOTO
-======================================= */
-
-.profile-photo{
-    width:120px !important;
-    height:120px !important;
-
-    object-fit:cover !important;
-
-    margin:0 auto 35px auto !important;
-
-    border-radius:50% !important;
 }
 
 </style>
@@ -357,7 +468,7 @@ nav .menu a{
 
     <div class="menu">
 
-        <a href="#about">
+        <a href="#contact">
             Contact
         </a>
 
@@ -415,377 +526,227 @@ nav .menu a{
 
 
         <div class="project">
-
             <img src="1.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="2.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="3.webp" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="4.webp" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="5.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="6.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="7.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="8.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="9.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="10.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="11.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="12.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="13.jpg" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="14.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="15.webp" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="16.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="17.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="18.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="19.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="20.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="21.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="22.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="23.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="24.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
         <div class="project">
-
             <img src="25.png" alt="Trailer project">
 
             <div class="project-overlay">
-
-                <span>
-                    Watch
-                </span>
-
+                <span>Watch</span>
             </div>
-
         </div>
 
 
@@ -833,7 +794,7 @@ nav .menu a{
         <div class="about-contact">
 
             <a
-                href="mailto:you@email.com"
+                href="#contact"
                 class="contact-button"
             >
                 CONTACT ME
@@ -841,6 +802,89 @@ nav .menu a{
 
         </div>
 
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     CONTACT FORM
+===================================== -->
+
+<section id="contact" class="contact-section">
+
+    <div class="section-title">
+        Contact
+    </div>
+
+
+    <div class="contact-content">
+
+        <h2>
+            Let's work together.
+        </h2>
+
+        <p>
+            Have a trailer, teaser or motion poster in mind?
+            Send me a message and I'll get back to you.
+        </p>
+
+
+        <form
+            class="contact-form"
+            action="https://formspree.io/f/xqpzpzwy"
+            method="POST"
+        >
+
+
+            <label for="name">
+                Name
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                >
+
+            </label>
+
+
+            <label for="email">
+                Email
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                >
+
+            </label>
+
+
+            <label for="message">
+                Message
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell me about your project..."
+                    required
+                ></textarea>
+
+            </label>
+
+
+            <button type="submit">
+                SEND MESSAGE
+            </button>
+
+
+        </form>
 
     </div>
 
