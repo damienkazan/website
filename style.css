@@ -1,524 +1,656 @@
 /* =======================================
-DK PORTFOLIO V2
+   DK PORTFOLIO V2
 ======================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    background:#050505;
-    color:#fff;
-    font-family:'Inter',sans-serif;
-    overflow-x:hidden;
+body {
+    background: #050505;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
-img{
-    display:block;
-    width:100%;
+img {
+    display: block;
+    width: 100%;
 }
 
-a{
-    color:white;
-    text-decoration:none;
+a {
+    color: white;
+    text-decoration: none;
 }
 
-section{
-    padding:120px 8%;
+section {
+    padding: 120px 8%;
 }
 
+/* =======================================
+   NAVIGATION
+======================================= */
 
-/* ---------------- NAV ---------------- */
-
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:28px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-    background:rgba(5,5,5,.18);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
+nav,
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(5, 5, 5, .18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
 
-.logo{
-    font-size:20px;
-    font-weight:900;
-    letter-spacing:6px;
+.logo {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 6px;
 }
 
-.menu{
-    display:flex;
-    gap:40px;
+.menu {
+    display: flex;
+    gap: 40px;
 }
 
-.menu a{
-    color:#d4d4d4;
-    transition:.35s;
+.menu a {
+    color: #d4d4d4;
+    transition: .35s;
 }
 
-.menu a:hover{
-    color:white;
+.menu a:hover {
+    color: white;
 }
 
+/* =======================================
+   HERO
+======================================= */
 
-/* ---------------- HERO ---------------- */
-
-.hero{
-    position:relative;
-    height:100vh;
-    display:flex;
-    align-items:center;
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.hero video{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.hero video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.92)
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, .45),
+        rgba(0, 0, 0, .92)
     );
 }
 
-.hero-content{
-    position:relative;
-    z-index:5;
-    max-width:760px;
+.hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 760px;
 }
 
-.eyebrow{
-    color:#9b9b9b;
-    letter-spacing:8px;
-    margin-bottom:25px;
-    font-size:13px;
+.eyebrow {
+    color: #9b9b9b;
+    letter-spacing: 8px;
+    margin-bottom: 25px;
+    font-size: 13px;
 }
 
-.hero h1{
-    font-size:92px;
-    line-height:1;
-    font-weight:800;
-    margin-bottom:28px;
+.hero h1 {
+    font-size: 92px;
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 28px;
 }
 
-.subtitle{
-    font-size:22px;
-    color:#cfcfcf;
+.subtitle {
+    font-size: 22px;
+    color: #cfcfcf;
 }
 
-.scroll-indicator{
-    margin-top:70px;
-    display:inline-flex;
-    flex-direction:column;
-    align-items:center;
-    gap:8px;
-    font-size:30px;
-    animation:float 2s infinite;
+.scroll-indicator {
+    margin-top: 70px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 30px;
+    animation: float 2s infinite;
 }
 
-.scroll-indicator span{
-    font-size:13px;
-    letter-spacing:3px;
-    color:#9b9b9b;
+.scroll-indicator span {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #9b9b9b;
 }
 
-@keyframes float{
-
-    0%,100%{
-        transform:translateY(0);
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
     }
 
-    50%{
-        transform:translateY(10px);
+    50% {
+        transform: translateY(10px);
     }
 }
 
+/* =======================================
+   SECTION TITLE
+======================================= */
 
-/* ------------ SECTION TITLE ---------- */
-
-.section-title{
-    font-size:13px;
-    letter-spacing:5px;
-    color:#8b8b8b;
-    text-transform:uppercase;
-    margin-bottom:50px;
+.section-title {
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: #8b8b8b;
+    text-transform: uppercase;
+    margin-bottom: 50px;
 }
 
+/* =======================================
+   PROJECTS
+======================================= */
 
-/* -------- FEATURED PROJECT ---------- */
-
-.featured-card{
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:60px;
-    align-items:center;
+.projects-grid {
+    padding-top: 80px;
+    padding-bottom: 120px;
 }
 
-.featured-image{
-    overflow:hidden;
-    border-radius:18px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-.featured-image img{
-    transition:.6s;
+.project {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    cursor: pointer;
 }
 
-.featured-image:hover img{
-    transform:scale(1.05);
+.project img {
+    transition: .45s;
 }
 
-.featured-info h2{
-    font-size:54px;
-    margin-bottom:20px;
+.project:hover img {
+    transform: scale(1.08);
 }
 
-.featured-info p{
-    color:#bcbcbc;
-    line-height:1.8;
-    margin-bottom:35px;
-}
-
-.featured-info a{
-    border-bottom:1px solid white;
-    padding-bottom:6px;
-}
-
-
-/* -------- GRID ---------- */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
-
-.project{
-    position:relative;
-    overflow:hidden;
-    border-radius:18px;
-    cursor:pointer;
-}
-
-.project img{
-    transition:.45s;
-}
-
-.project:hover img{
-    transform:scale(1.08);
-}
-
-.project-overlay{
-    position:absolute;
-    inset:0;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    padding:30px;
-    background:linear-gradient(
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    background: linear-gradient(
         transparent,
-        rgba(0,0,0,.82)
+        rgba(0, 0, 0, .82)
     );
 }
 
-.project-overlay h3{
-    font-size:24px;
+.project-overlay h3 {
+    font-size: 24px;
 }
 
-.project-overlay span{
-    margin-top:10px;
-    color:#ddd;
+.project-overlay span {
+    margin-top: 10px;
+    color: #ddd;
 }
 
+/* =======================================
+   FEATURED PROJECT
+======================================= */
 
-/* -------- ABOUT ---------- */
-
-.about{
-    padding-top:120px;
-    padding-bottom:0;
-    margin:0;
+.featured-card {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+    align-items: center;
 }
 
-.about-content{
-    max-width:700px;
+.featured-image {
+    overflow: hidden;
+    border-radius: 18px;
 }
 
-.about-content h2{
-    font-size:48px;
-    margin-bottom:25px;
+.featured-image img {
+    transition: .6s;
 }
 
-.about-content p{
-    color:#c4c4c4;
-    line-height:1.9;
+.featured-image:hover img {
+    transform: scale(1.05);
 }
 
-.about-content p:last-child{
-    margin-bottom:0;
+.featured-info h2 {
+    font-size: 54px;
+    margin-bottom: 20px;
 }
 
-
-/* -------- CONTACT ---------- */
-
-.contact{
-    text-align:center;
-    padding-top:40px;
-    padding-bottom:120px;
-    margin:0;
+.featured-info p {
+    color: #bcbcbc;
+    line-height: 1.8;
+    margin-bottom: 35px;
 }
 
-.contact h2{
-    font-size:58px;
-    margin-bottom:25px;
+.featured-info a {
+    border-bottom: 1px solid white;
+    padding-bottom: 6px;
 }
 
-.contact p{
-    color:#cfcfcf;
-    margin-bottom:40px;
+/* =======================================
+   ABOUT
+======================================= */
+
+.about {
+    text-align: center;
+
+    /*
+       IMPORTANT :
+       On réduit fortement l'espace sous
+       le bloc About afin que Contact arrive
+       directement après "worldwide."
+    */
+    padding-top: 80px;
+    padding-bottom: 50px;
 }
 
-.contact-button{
-    border:1px solid white;
-    padding:18px 44px;
-    display:inline-block;
-    transition:.35s;
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.contact-button:hover{
-    background:white;
-    color:black;
+.profile-photo {
+    width: 108px;
+    height: 108px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 35px;
 }
 
-
-/* -------- CONTACT FORM ---------- */
-
-.contact-form{
-    width:min(700px,100%);
-    margin:50px auto 0;
-    display:flex;
-    flex-direction:column;
-    gap:25px;
-    text-align:left;
+.about-content h2 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 25px;
 }
 
-.contact-form label{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    color:#ddd;
-    font-size:15px;
+.about-content p {
+    color: #c4c4c4;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* =======================================
+   CONTACT
+======================================= */
+
+.contact {
+    text-align: center;
+
+    /*
+       IMPORTANT :
+       Aucun gros padding supérieur ici.
+       Le gap vient uniquement des 50px
+       définis à la fin de .about.
+    */
+    padding-top: 0;
+    padding-bottom: 120px;
+}
+
+.contact h2 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.contact p {
+    color: #cfcfcf;
+    margin-bottom: 45px;
+}
+
+/* =======================================
+   CONTACT FORM
+======================================= */
+
+.contact-form {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #dcdcdc;
+    font-size: 14px;
 }
 
 .contact-form input,
-.contact-form textarea{
-    width:100%;
-    background:#080808;
-    color:white;
-    border:1px solid #333;
-    padding:18px;
-    font-family:'Inter',sans-serif;
-    font-size:16px;
-    border-radius:0;
-    outline:none;
+.contact-form textarea {
+    width: 100%;
+    background: #080808;
+    border: 1px solid #333;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding: 16px;
+    border-radius: 0;
+    outline: none;
+    transition: border-color .3s, background .3s;
+}
+
+.contact-form input {
+    min-height: 54px;
+}
+
+.contact-form textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #666;
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus{
-    border-color:#777;
+.contact-form textarea:focus {
+    border-color: #777;
+    background: #0b0b0b;
 }
 
-.contact-form textarea{
-    min-height:180px;
-    resize:vertical;
+.contact-form button {
+    width: 100%;
+    min-height: 56px;
+    border: 1px solid #fff;
+    background: #fff;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 16px 20px;
+    text-align: center;
+    transition: .35s;
 }
 
-.contact-form button{
-    width:100%;
-    border:1px solid white;
-    background:white;
-    color:black;
-    padding:18px 30px;
-    font-family:'Inter',sans-serif;
-    font-size:14px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.35s;
-}
-
-.contact-form button:hover{
-    background:#050505;
-    color:white;
+.contact-form button:hover {
+    background: transparent;
+    color: #fff;
 }
 
 .form-success,
-.form-error{
-    text-align:center;
-    margin-top:5px;
-    display:none;
+.form-error {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-.form-success{
-    color:#fff;
+.form-success {
+    display: none;
+    color: #bdbdbd;
 }
 
-.form-error{
-    color:#aaa;
+.form-error {
+    display: none;
+    color: #ff8b8b;
 }
 
+/* =======================================
+   FOOTER
+======================================= */
 
-/* -------- FOOTER ---------- */
-
-footer{
-    padding:45px 20px;
-    text-align:center;
-    color:#777;
+footer {
+    padding: 45px 20px;
+    text-align: center;
+    color: #777;
 }
 
+/* =======================================
+   MOBILE / TABLET
+======================================= */
 
-/* -------- MOBILE ---------- */
+@media (max-width: 900px) {
 
-@media(max-width:900px){
-
-    .hero h1{
-        font-size:54px;
-        margin-bottom:45px;
+    section {
+        padding-left: 8%;
+        padding-right: 8%;
     }
 
-    .subtitle{
-        margin-top:0;
+    .hero h1 {
+        font-size: 54px;
+        margin-bottom: 45px;
     }
 
-    .grid{
-        grid-template-columns:1fr;
+    .subtitle {
+        margin-top: 0;
     }
 
-    .featured-card{
-        grid-template-columns:1fr;
+    .grid {
+        grid-template-columns: 1fr;
     }
 
-    .menu{
-        display:none;
+    .featured-card {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        display: flex;
+        gap: 0;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+
+    .about-content h2 {
+        font-size: 42px;
+    }
+
+    .contact h2 {
+        font-size: 48px;
     }
 }
 
+/* =======================================
+   MOBILE
+======================================= */
 
-/* -------- MOBILE SPACING FIX ---------- */
+@media (max-width: 600px) {
 
-@media(max-width:600px){
+    /* ---------- NAV ---------- */
 
-    .hero{
-        min-height:0;
-        height:auto;
-        padding-top:150px;
-        padding-bottom:90px;
-        align-items:flex-start;
+    nav,
+    .site-nav {
+        padding: 28px 8%;
+        min-height: 82px;
     }
 
-    .hero-content{
-        width:100%;
+    .logo {
+        font-size: 20px;
+        letter-spacing: 6px;
     }
 
-    .hero h1{
-        font-size:54px;
-        line-height:.98;
-        margin-bottom:45px;
+    .menu {
+        display: flex;
+        margin-left: auto;
     }
 
-    .subtitle{
-        font-size:22px;
-        line-height:1.3;
-        margin-top:0;
+    .menu a {
+        font-size: 18px;
+        color: #fff;
     }
 
-    #projects{
-        padding-top:80px;
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 0;
+        height: auto;
+        padding-top: 150px;
+        padding-bottom: 90px;
+        align-items: flex-start;
     }
 
-    #projects .section-title{
-        margin-bottom:45px;
+    .hero-content {
+        width: 100%;
     }
 
-
-    /* ABOUT */
-
-    .about{
-        padding-top:80px !important;
-        padding-bottom:0 !important;
-        margin:0 !important;
+    .eyebrow {
+        font-size: 12px;
+        letter-spacing: 7px;
+        margin-bottom: 55px;
     }
 
-    .about-content{
-        margin:0;
+    .hero h1 {
+        font-size: 54px;
+        line-height: .98;
+        margin-bottom: 45px;
     }
 
-
-    /* CONTACT */
-
-    .contact{
-        padding-top:30px !important;
-        padding-bottom:90px !important;
-        margin:0 !important;
+    .subtitle {
+        font-size: 22px;
+        line-height: 1.3;
+        margin-top: 0;
     }
 
-    .contact h2{
-        margin-top:0;
+    /* ---------- PROJECTS ---------- */
+
+    #projects,
+    .projects-grid {
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
-    .contact-form{
-        width:100%;
-        margin-top:40px;
+    #projects .section-title {
+        margin-bottom: 45px;
+    }
+
+    /* ---------- ABOUT ---------- */
+
+    #about,
+    .about {
+        /*
+           C'est ici que l'espace inutile était
+           particulièrement visible sur iPhone.
+        */
+        padding-top: 80px;
+        padding-bottom: 45px;
+    }
+
+    .about-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .profile-photo {
+        width: 88px;
+        height: 88px;
+        margin-bottom: 30px;
+    }
+
+    .about-content h2 {
+        font-size: 42px;
+        line-height: 1.12;
+        margin-bottom: 30px;
+    }
+
+    .about-content p {
+        font-size: 20px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    .about-content p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* ---------- CONTACT ---------- */
+
+    #contact,
+    .contact {
+        /*
+           PAS de padding-top ici.
+           Le contact commence seulement 45px
+           après le dernier texte de About.
+        */
+        padding-top: 0;
+        padding-bottom: 80px;
+    }
+
+    .contact h2 {
+        font-size: 48px;
+        line-height: 1.1;
+        margin-bottom: 30px;
+    }
+
+    .contact p {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 45px;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+        gap: 25px;
+    }
+
+    .contact-form label {
+        font-size: 18px;
+        gap: 12px;
     }
 
     .contact-form input,
-    .contact-form textarea{
-        width:100%;
-        font-size:16px;
-        padding:18px;
+    .contact-form textarea {
+        width: 100%;
+        font-size: 18px;
+        padding: 18px;
     }
 
-    .contact-form textarea{
-        min-height:160px;
+    .contact-form input {
+        min-height: 64px;
     }
 
-    .contact-form button{
-        width:100%;
-        padding:18px;
+    .contact-form textarea {
+        min-height: 180px;
     }
-}
 
+    .contact-form button {
+        min-height: 60px;
+        font-size: 15px;
+    }
 
-/* -------- FINAL ABOUT / CONTACT GAP FIX ---------- */
+    /* ---------- FOOTER ---------- */
 
-/*
-   The About section ends directly before Contact.
-   No large section padding is allowed between them.
-*/
-
-.about + .contact{
-    margin-top:0 !important;
-    padding-top:40px !important;
-}
-
-@media(max-width:600px){
-
-    .about + .contact{
-        margin-top:0 !important;
-        padding-top:30px !important;
+    footer {
+        padding: 35px 20px;
     }
 }
