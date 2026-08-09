@@ -33,6 +33,7 @@ section{
     padding:120px 8%;
 }
 
+
 /* ---------------- NAV ---------------- */
 
 nav{
@@ -40,12 +41,17 @@ nav{
     top:0;
     left:0;
     width:100%;
+
     padding:28px 8%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     z-index:1000;
-    background:rgba(5,5,5,.18);
+
+    background:rgba(5,5,5,.75);
+
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
 }
@@ -70,26 +76,43 @@ nav{
     color:white;
 }
 
+
 /* ---------------- HERO ---------------- */
 
 .hero{
     position:relative;
-    height:100vh;
+
+    /*
+       On ne force plus 100vh.
+       Le contenu détermine la hauteur du Hero.
+    */
+    height:auto;
+    min-height:0;
+
     display:flex;
-    align-items:center;
+    align-items:flex-start;
+
+    /*
+       Espace réservé à la barre fixe.
+       La barre fait environ 68px sur desktop.
+    */
+    padding:125px 8% 40px;
 }
 
 .hero video{
     position:absolute;
     inset:0;
+
     width:100%;
     height:100%;
+
     object-fit:cover;
 }
 
 .overlay{
     position:absolute;
     inset:0;
+
     background:linear-gradient(
         rgba(0,0,0,.45),
         rgba(0,0,0,.92)
@@ -99,41 +122,67 @@ nav{
 .hero-content{
     position:relative;
     z-index:5;
+
+    width:100%;
     max-width:760px;
 }
 
 .eyebrow{
     color:#9b9b9b;
+
     letter-spacing:8px;
+
     margin-bottom:25px;
+
     font-size:13px;
 }
 
 .hero h1{
     font-size:92px;
+
     line-height:1;
+
     font-weight:800;
+
     margin-bottom:28px;
 }
 
 .subtitle{
+    display:block;
+
     font-size:22px;
+    line-height:1.3;
+
     color:#cfcfcf;
+
+    margin-top:0;
+    margin-bottom:0;
 }
+
+
+/* ---------------- SCROLL ---------------- */
 
 .scroll-indicator{
     margin-top:70px;
+
     display:inline-flex;
+
     flex-direction:column;
+
     align-items:center;
+
     gap:8px;
+
     font-size:30px;
+
     animation:float 2s infinite;
 }
 
 .scroll-indicator span{
     font-size:13px;
+
     letter-spacing:3px;
+
     color:#9b9b9b;
 }
 
@@ -149,27 +198,37 @@ nav{
 
 }
 
+
 /* ------------ SECTION TITLE ---------- */
 
 .section-title{
     font-size:13px;
+
     letter-spacing:5px;
+
     color:#8b8b8b;
+
     text-transform:uppercase;
+
     margin-bottom:50px;
 }
+
 
 /* -------- FEATURED PROJECT ---------- */
 
 .featured-card{
     display:grid;
+
     grid-template-columns:1.3fr 1fr;
+
     gap:60px;
+
     align-items:center;
 }
 
 .featured-image{
     overflow:hidden;
+
     border-radius:18px;
 }
 
@@ -183,36 +242,53 @@ nav{
 
 .featured-info h2{
     font-size:54px;
+
     margin-bottom:20px;
 }
 
 .featured-info p{
     color:#bcbcbc;
+
     line-height:1.8;
+
     margin-bottom:35px;
 }
 
 .featured-info a{
     border-bottom:1px solid white;
+
     padding-bottom:6px;
 }
+
 
 /* -------- GRID ---------- */
 
 .grid{
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:30px;
 }
 
 .project{
     position:relative;
+
     overflow:hidden;
+
     border-radius:18px;
+
     cursor:pointer;
+
+    aspect-ratio:16 / 9;
 }
 
 .project img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
     transition:.45s;
 }
 
@@ -222,11 +298,17 @@ nav{
 
 .project-overlay{
     position:absolute;
+
     inset:0;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:flex-end;
+
     padding:30px;
+
     background:linear-gradient(
         transparent,
         rgba(0,0,0,.82)
@@ -239,8 +321,27 @@ nav{
 
 .project-overlay span{
     margin-top:10px;
+
     color:#ddd;
 }
+
+
+/* -------- PROJECTS SPACING ---------- */
+
+/*
+   Réduit l'espace inutile entre
+   Trailer Editing • Motion Posters
+   et WORK.
+*/
+
+#projects{
+    padding-top:10px;
+}
+
+#projects .section-title{
+    margin-bottom:45px;
+}
+
 
 /* -------- ABOUT ---------- */
 
@@ -250,13 +351,28 @@ nav{
 
 .about-content h2{
     font-size:48px;
+
     margin-bottom:25px;
 }
 
 .about-content p{
     color:#c4c4c4;
+
     line-height:1.9;
 }
+
+
+/* -------- PROFILE PHOTO ---------- */
+
+.profile-photo{
+    width:140px;
+    height:140px;
+
+    object-fit:cover;
+
+    margin:0 auto 35px;
+}
+
 
 /* -------- CONTACT ---------- */
 
@@ -266,44 +382,68 @@ nav{
 
 .contact h2{
     font-size:58px;
+
     margin-bottom:25px;
 }
 
 .contact p{
     color:#cfcfcf;
+
     margin-bottom:40px;
 }
 
 .contact-button{
     border:1px solid white;
+
     padding:18px 44px;
+
     display:inline-block;
+
     transition:.35s;
 }
 
 .contact-button:hover{
     background:white;
+
     color:black;
 }
+
 
 /* -------- FOOTER ---------- */
 
 footer{
     padding:45px 20px;
+
     text-align:center;
+
     color:#777;
 }
 
-/* -------- MOBILE ---------- */
+
+/* =======================================
+   TABLET / MOBILE
+======================================= */
 
 @media(max-width:900px){
 
+    .hero{
+        padding-top:125px;
+        padding-bottom:35px;
+    }
+
     .hero h1{
         font-size:54px;
-        margin-bottom:45px;
+
+        line-height:.98;
+
+        margin-bottom:30px;
     }
 
     .subtitle{
+        font-size:22px;
+
+        line-height:1.3;
+
         margin-top:0;
     }
 
@@ -321,40 +461,107 @@ footer{
 
 }
 
-/* -------- MOBILE SPACING FIX ---------- */
+
+/* =======================================
+   MOBILE SPACING FIX
+======================================= */
 
 @media(max-width:600px){
 
+    /*
+       Barre fixe mobile :
+       elle reste en haut sans recouvrir
+       le début du Hero.
+    */
+
+    nav{
+        padding:22px 8%;
+
+        min-height:76px;
+    }
+
+
+    /*
+       On décale réellement le contenu
+       sous la barre.
+    */
+
     .hero{
         min-height:0;
+
         height:auto;
-        padding-top:150px;
-        padding-bottom:90px;
+
+        padding-top:145px;
+
+        padding-left:8%;
+        padding-right:8%;
+
+        padding-bottom:30px;
+
         align-items:flex-start;
     }
+
 
     .hero-content{
         width:100%;
     }
 
+
     .hero h1{
         font-size:54px;
+
         line-height:.98;
-        margin-bottom:45px;
+
+        margin-bottom:30px;
     }
+
+
+    /*
+       Le sous-titre reste sous le H1.
+    */
 
     .subtitle{
+        display:block;
+
         font-size:22px;
+
         line-height:1.3;
+
         margin-top:0;
+
+        margin-bottom:0;
     }
+
+
+    /*
+       WORK arrive directement après
+       le contenu du Hero.
+    */
 
     #projects{
-        padding-top:80px;
+        padding-top:0;
+
+        padding-left:8%;
+        padding-right:8%;
     }
 
+
     #projects .section-title{
-        margin-bottom:45px;
+        margin-bottom:35px;
+    }
+
+
+    .grid{
+        grid-template-columns:1fr;
+
+        gap:30px;
+    }
+
+
+    .project{
+        width:100%;
+
+        aspect-ratio:16 / 9;
     }
 
 }
