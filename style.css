@@ -331,6 +331,18 @@ nav {
     );
 }
 
+/* Degrade plus doux sur les 18 premieres vignettes pour eviter
+   l'effet de bande noire trop marquee sur les images larges/claires.
+   Les 7 dernieres vignettes gardent le degrade d'origine. */
+.grid .project:nth-child(-n+18) .project-overlay {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, .78) 0%,
+        rgba(0, 0, 0, .35) 28%,
+        rgba(0, 0, 0, 0) 62%
+    );
+}
+
 .project-overlay h3 {
     font-size: 24px;
 }
@@ -425,14 +437,14 @@ nav {
 #about .about-content > img.profile-photo {
     display: block;
 
-    width: 160px !important;
-    height: 160px !important;
+    width: 180px !important;
+    height: 180px !important;
 
-    min-width: 160px !important;
-    min-height: 160px !important;
+    min-width: 180px !important;
+    min-height: 180px !important;
 
-    max-width: 160px !important;
-    max-height: 160px !important;
+    max-width: 180px !important;
+    max-height: 180px !important;
 
     object-fit: cover;
 
@@ -641,6 +653,86 @@ footer {
     color: #777;
 
     background: #050505;
+}
+
+
+/* =======================================
+   VIDEO MODAL
+======================================= */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.video-modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 60px 8%;
+
+    background: rgba(0, 0, 0, .92);
+
+    z-index: 2000;
+}
+
+.video-modal.active {
+    display: flex;
+}
+
+.video-modal-inner {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1100px;
+}
+
+.video-modal-inner video {
+    width: 100%;
+
+    max-height: 80vh;
+
+    display: block;
+
+    background: #000;
+
+    border-radius: 12px;
+}
+
+.video-modal-close {
+    position: absolute;
+
+    top: -46px;
+
+    right: 0;
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.video-modal-close:hover {
+    color: #9b9b9b;
 }
 
 
