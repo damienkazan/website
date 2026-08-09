@@ -534,3 +534,15 @@ footer{
     }
 
 }
+/* Mobile spacing fix */
+@media (max-width:900px){
+
+    .hero h1{
+        margin-bottom:45px !important;
+    }
+
+    .subtitle{
+        margin-top:0 !important;
+    }
+
+}
