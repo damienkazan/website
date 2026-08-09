@@ -1,5 +1,5 @@
 /* =======================================
-DK PORTFOLIO V2
+   DK PORTFOLIO V2
 ======================================= */
 
 *{
@@ -8,9 +8,11 @@ DK PORTFOLIO V2
     box-sizing:border-box;
 }
 
+
 html{
     scroll-behavior:smooth;
 }
+
 
 body{
     background:#050505;
@@ -19,127 +21,144 @@ body{
     overflow-x:hidden;
 }
 
+
 img{
     display:block;
     width:100%;
 }
+
 
 a{
     color:white;
     text-decoration:none;
 }
 
+
 section{
     padding:120px 8%;
 }
 
 
-/* ---------------- NAV ---------------- */
+/* =======================================
+   NAVIGATION
+======================================= */
 
+.site-nav,
 nav{
     position:fixed;
+
     top:0;
     left:0;
 
     width:100%;
-    height:68px;
 
-    padding:0 8%;
+    min-height:68px;
+
+    padding:20px 8%;
 
     display:flex;
+
+    justify-content:space-between;
     align-items:center;
 
     z-index:1000;
 
-    background:rgba(5,5,5,.75);
+    background:rgba(5,5,5,.72);
 
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
 }
 
+
 .logo{
     font-size:20px;
+
     font-weight:900;
+
     letter-spacing:6px;
+
+    flex-shrink:0;
 }
+
 
 .menu{
-    position:absolute;
+    display:flex;
 
-    right:8%;
-    top:0;
+    gap:40px;
 
-    height:68px;
-
-    display:flex !important;
     align-items:center;
-
-    visibility:visible !important;
-    opacity:1 !important;
 }
+
 
 .menu a{
-    display:block !important;
+    color:#d4d4d4;
 
-    color:#fff !important;
+    font-size:16px;
 
-    text-decoration:none;
-
-    font-size:15px;
-
-    white-space:nowrap;
-
-    visibility:visible !important;
-    opacity:1 !important;
+    transition:.35s;
 }
+
 
 .menu a:hover{
-    color:#fff;
+    color:white;
 }
 
 
-/* ---------------- HERO ---------------- */
+/* =======================================
+   HERO
+======================================= */
 
 .hero{
     position:relative;
 
-    height:auto;
-    min-height:0;
+    min-height:100vh;
 
     display:flex;
-    align-items:flex-start;
 
-    padding:125px 8% 25px;
+    align-items:center;
+
+    padding-top:120px;
+
+    padding-bottom:100px;
 }
+
 
 .hero video{
     position:absolute;
+
     inset:0;
 
     width:100%;
     height:100%;
 
     object-fit:cover;
+
+    z-index:0;
 }
+
 
 .overlay{
     position:absolute;
+
     inset:0;
 
     background:linear-gradient(
         rgba(0,0,0,.45),
         rgba(0,0,0,.92)
     );
+
+    z-index:1;
 }
+
 
 .hero-content{
     position:relative;
 
     z-index:5;
 
-    width:100%;
     max-width:760px;
 }
+
 
 .eyebrow{
     color:#9b9b9b;
@@ -151,6 +170,7 @@ nav{
     font-size:13px;
 }
 
+
 .hero h1{
     font-size:92px;
 
@@ -161,9 +181,8 @@ nav{
     margin-bottom:28px;
 }
 
-.subtitle{
-    display:block;
 
+.subtitle{
     font-size:22px;
 
     line-height:1.3;
@@ -173,8 +192,6 @@ nav{
     margin:0;
 }
 
-
-/* ---------------- SCROLL ---------------- */
 
 .scroll-indicator{
     margin-top:70px;
@@ -192,6 +209,7 @@ nav{
     animation:float 2s infinite;
 }
 
+
 .scroll-indicator span{
     font-size:13px;
 
@@ -199,6 +217,7 @@ nav{
 
     color:#9b9b9b;
 }
+
 
 @keyframes float{
 
@@ -213,7 +232,9 @@ nav{
 }
 
 
-/* ------------ SECTION TITLE ---------- */
+/* =======================================
+   SECTION TITLES
+======================================= */
 
 .section-title{
     font-size:13px;
@@ -224,58 +245,23 @@ nav{
 
     text-transform:uppercase;
 
-    margin-bottom:35px;
+    margin-bottom:50px;
 }
 
 
-/* -------- FEATURED PROJECT ---------- */
+/* =======================================
+   WORK / GRID
+======================================= */
 
-.featured-card{
-    display:grid;
-
-    grid-template-columns:1.3fr 1fr;
-
-    gap:60px;
-
-    align-items:center;
-}
-
-.featured-image{
-    overflow:hidden;
-
-    border-radius:18px;
-}
-
-.featured-image img{
-    transition:.6s;
-}
-
-.featured-image:hover img{
-    transform:scale(1.05);
-}
-
-.featured-info h2{
-    font-size:54px;
-
-    margin-bottom:20px;
-}
-
-.featured-info p{
-    color:#bcbcbc;
-
-    line-height:1.8;
-
-    margin-bottom:35px;
-}
-
-.featured-info a{
-    border-bottom:1px solid white;
-
-    padding-bottom:6px;
+.projects-grid{
+    padding-top:90px;
 }
 
 
-/* -------- GRID ---------- */
+.projects-grid .section-title{
+    margin-bottom:50px;
+}
+
 
 .grid{
     display:grid;
@@ -284,6 +270,7 @@ nav{
 
     gap:30px;
 }
+
 
 .project{
     position:relative;
@@ -297,6 +284,7 @@ nav{
     aspect-ratio:16 / 9;
 }
 
+
 .project img{
     width:100%;
     height:100%;
@@ -306,9 +294,11 @@ nav{
     transition:.45s;
 }
 
+
 .project:hover img{
     transform:scale(1.08);
 }
+
 
 .project-overlay{
     position:absolute;
@@ -329,9 +319,11 @@ nav{
     );
 }
 
+
 .project-overlay h3{
     font-size:24px;
 }
+
 
 .project-overlay span{
     margin-top:10px;
@@ -340,22 +332,31 @@ nav{
 }
 
 
-/* -------- PROJECTS SPACING ---------- */
+/* =======================================
+   ABOUT
+======================================= */
 
-#projects{
-    padding-top:0;
+.about{
+    padding-top:120px;
 }
 
-#projects .section-title{
-    margin-bottom:35px;
-}
-
-
-/* -------- ABOUT ---------- */
 
 .about-content{
     max-width:700px;
 }
+
+
+.profile-photo{
+    width:130px;
+    height:130px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin:0 auto 40px;
+}
+
 
 .about-content h2{
     font-size:48px;
@@ -363,30 +364,42 @@ nav{
     margin-bottom:25px;
 }
 
+
 .about-content p{
     color:#c4c4c4;
 
     line-height:1.9;
+
+    margin-bottom:20px;
 }
 
 
-/* -------- PROFILE PHOTO ---------- */
+.about-contact{
+    margin-top:35px;
 
-.profile-photo{
-    width:140px;
-    height:140px;
-
-    object-fit:cover;
-
-    margin:0 auto 35px;
+    text-align:left;
 }
 
 
-/* -------- CONTACT ---------- */
+.about-content{
+    max-width:800px;
+
+    margin:0 auto;
+
+    text-align:center;
+}
+
+
+/* =======================================
+   CONTACT
+======================================= */
 
 .contact{
     text-align:center;
+
+    padding-top:120px;
 }
+
 
 .contact h2{
     font-size:58px;
@@ -394,11 +407,13 @@ nav{
     margin-bottom:25px;
 }
 
+
 .contact p{
     color:#cfcfcf;
 
     margin-bottom:40px;
 }
+
 
 .contact-button{
     border:1px solid white;
@@ -410,6 +425,7 @@ nav{
     transition:.35s;
 }
 
+
 .contact-button:hover{
     background:white;
 
@@ -417,7 +433,149 @@ nav{
 }
 
 
-/* -------- FOOTER ---------- */
+/* =======================================
+   CONTACT FORM
+======================================= */
+
+.contact-form{
+    width:100%;
+
+    max-width:700px;
+
+    margin:50px auto 0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+    text-align:left;
+}
+
+
+.contact-form label{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    color:#d4d4d4;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+}
+
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+
+    padding:17px 18px;
+
+    border:1px solid #333;
+
+    border-radius:0;
+
+    background:#0b0b0b;
+
+    color:white;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#aaa;
+}
+
+
+.contact-form textarea{
+    min-height:180px;
+
+    resize:vertical;
+}
+
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:#666;
+}
+
+
+.contact-form button{
+    align-self:flex-start;
+
+    border:1px solid white;
+
+    background:transparent;
+
+    color:white;
+
+    padding:18px 44px;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+
+.contact-form button:hover{
+    background:white;
+
+    color:black;
+}
+
+
+.contact-form button:disabled{
+    opacity:.6;
+
+    cursor:default;
+}
+
+
+.form-success{
+    display:none;
+
+    margin-top:5px;
+
+    color:#fff;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+}
+
+
+.form-error{
+    display:none;
+
+    margin-top:5px;
+
+    color:#ff8a8a;
+
+    font-size:15px;
+}
+
+
+/* =======================================
+   FOOTER
+======================================= */
 
 footer{
     padding:45px 20px;
@@ -429,23 +587,24 @@ footer{
 
 
 /* =======================================
-TABLET
+   TABLET
 ======================================= */
 
 @media(max-width:900px){
 
-    .hero{
-        padding-top:125px;
-        padding-bottom:25px;
+    section{
+        padding:100px 8%;
     }
+
 
     .hero h1{
         font-size:54px;
 
         line-height:.98;
 
-        margin-bottom:30px;
+        margin-bottom:40px;
     }
+
 
     .subtitle{
         font-size:22px;
@@ -453,33 +612,71 @@ TABLET
         line-height:1.3;
     }
 
+
     .grid{
         grid-template-columns:1fr;
     }
 
+
     .featured-card{
         grid-template-columns:1fr;
+    }
+
+
+    .menu{
+        display:flex;
+
+        gap:0;
+    }
+
+
+    .menu a{
+        font-size:16px;
+    }
+
+
+    .about-content h2{
+        font-size:40px;
+    }
+
+
+    .contact h2{
+        font-size:46px;
     }
 
 }
 
 
 /* =======================================
-MOBILE
+   MOBILE
 ======================================= */
 
 @media(max-width:600px){
 
-    /*
-       BARRE MOBILE
-       DK à gauche / Contact à droite
-    */
+    /* ---------- NAV ---------- */
 
+    .site-nav,
     nav{
-        height:76px;
+
+        height:86px;
+
+        min-height:86px;
 
         padding:0 8%;
+
+        display:flex;
+
+        flex-direction:row;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        background:rgba(5,5,5,.92);
+
+        z-index:1000;
     }
+
 
     .logo{
         font-size:20px;
@@ -487,67 +684,72 @@ MOBILE
         letter-spacing:6px;
     }
 
+
     .menu{
-        position:absolute;
-
-        right:8%;
-        top:0;
-
-        height:76px;
-
-        display:flex !important;
+        display:flex;
 
         align-items:center;
 
-        visibility:visible !important;
-        opacity:1 !important;
+        margin-left:auto;
     }
 
+
     .menu a{
-        display:block !important;
+        display:block;
+
+        color:#fff;
 
         font-size:16px;
 
-        color:#fff !important;
-
-        visibility:visible !important;
-        opacity:1 !important;
+        white-space:nowrap;
     }
 
 
-    /*
-       HERO SOUS LA BARRE
-    */
+    /* ---------- HERO ---------- */
 
     .hero{
-        height:auto;
 
         min-height:0;
 
-        padding-top:145px;
+        height:auto;
 
-        padding-left:8%;
-        padding-right:8%;
+        padding-top:150px;
 
-        padding-bottom:25px;
+        padding-bottom:75px;
 
         align-items:flex-start;
     }
 
+
     .hero-content{
+
         width:100%;
+
+        max-width:none;
     }
 
+
+    .eyebrow{
+
+        font-size:13px;
+
+        letter-spacing:8px;
+
+        margin-bottom:25px;
+    }
+
+
     .hero h1{
+
         font-size:54px;
 
         line-height:.98;
 
-        margin-bottom:30px;
+        margin-bottom:45px;
     }
 
+
     .subtitle{
-        display:block;
 
         font-size:22px;
 
@@ -557,31 +759,140 @@ MOBILE
     }
 
 
-    /*
-       WORK
-    */
+    /* ---------- WORK ---------- */
 
     #projects{
+
         padding-top:0;
 
-        padding-left:8%;
-        padding-right:8%;
+        padding-bottom:90px;
     }
+
 
     #projects .section-title{
-        margin-bottom:35px;
+
+        margin-bottom:45px;
     }
 
+
+    .projects-grid .section-title{
+
+        font-size:13px;
+
+        letter-spacing:5px;
+    }
+
+
     .grid{
+
         grid-template-columns:1fr;
 
         gap:30px;
     }
 
+
     .project{
+
         width:100%;
 
         aspect-ratio:16 / 9;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about{
+
+        padding-top:90px;
+    }
+
+
+    .profile-photo{
+
+        width:110px;
+
+        height:110px;
+
+        margin-bottom:30px;
+    }
+
+
+    .about-content{
+
+        width:100%;
+
+        max-width:none;
+    }
+
+
+    .about-content h2{
+
+        font-size:36px;
+
+        line-height:1.1;
+    }
+
+
+    .about-contact{
+
+        text-align:center;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact{
+
+        padding-top:90px;
+
+        padding-bottom:90px;
+    }
+
+
+    .contact h2{
+
+        font-size:38px;
+
+        line-height:1.1;
+    }
+
+
+    .contact-form{
+
+        margin-top:40px;
+
+        gap:22px;
+    }
+
+
+    .contact-form input,
+    .contact-form textarea{
+
+        font-size:16px;
+
+        padding:16px;
+    }
+
+
+    .contact-form textarea{
+
+        min-height:160px;
+    }
+
+
+    .contact-form button{
+
+        width:100%;
+
+        text-align:center;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer{
+
+        padding:45px 20px;
     }
 
 }
