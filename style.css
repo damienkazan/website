@@ -86,8 +86,14 @@ nav {
 .hero {
     position: relative;
 
-    /* Réduit l'espace entre le HERO et WORK */
-    height: 38vh;
+    /*
+       Desktop :
+       hauteur réduite pour rapprocher WORK
+       du contenu du HERO.
+    */
+    height: 500px;
+
+    min-height: 0;
 
     display: flex;
     align-items: center;
@@ -117,6 +123,7 @@ nav {
 
 .hero-content {
     position: relative;
+
     z-index: 5;
 
     max-width: 760px;
