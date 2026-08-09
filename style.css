@@ -81,7 +81,12 @@ nav {
 
 .hero {
     position: relative;
-    height: 72vh;
+
+    /*
+       Réduit l'espace vertical avant WORK
+       sur ordinateur.
+    */
+    height: 62vh;
 
     display: flex;
     align-items: center;
@@ -187,7 +192,12 @@ nav {
 ======================================= */
 
 #projects {
-    padding-top: 55px;
+    /*
+       Espace réduit au-dessus de WORK
+       sur ordinateur.
+    */
+    padding-top: 35px;
+
     padding-bottom: 80px;
 
     background: #050505;
@@ -316,13 +326,6 @@ nav {
 /* =======================================
    PROFILE PHOTO
 ======================================= */
-
-/*
-   IMPORTANT :
-   Sélecteur très précis pour empêcher
-   le img { width:100% } global de prendre
-   le dessus sur la photo de profil.
-*/
 
 #about .about-content > img.profile-photo {
     display: block;
@@ -721,16 +724,9 @@ footer {
     }
 
 
-    /*
+    /* -----------------------------------
        PHOTO IPHONE
-       ------------------------------
-
-       On force ici la photo à 88x88.
-
-       Le sélecteur est volontairement
-       très précis pour passer devant
-       la règle globale img { width:100%; }.
-    */
+    ----------------------------------- */
 
     #about .about-content > img.profile-photo {
         display: block;
