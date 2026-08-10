@@ -60,3 +60,47 @@ document.addEventListener("keydown", (e)=>{
         closeVideoModal();
     }
 });
+
+// ---- CONTACT FORM ----
+const contactForm = document.querySelector(".contact-form");
+if(contactForm){
+    const successMsg = contactForm.querySelector(".form-success");
+    const errorMsg = contactForm.querySelector(".form-error");
+    const submitBtn = contactForm.querySelector("button[type='submit']");
+
+    contactForm.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        successMsg.classList.remove("show");
+        errorMsg.classList.remove("show");
+        if(submitBtn){
+            submitBtn.disabled = true;
+        }
+
+        const formData = new FormData(contactForm);
+
+        fetch(contactForm.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+        })
+        .then(response => {
+            if(response.ok){
+                successMsg.classList.add("show");
+                contactForm.reset();
+            } else {
+                errorMsg.classList.add("show");
+            }
+        })
+        .catch(() => {
+            errorMsg.classList.add("show");
+        })
+        .finally(() => {
+            if(submitBtn){
+                submitBtn.disabled = false;
+            }
+        });
+    });
+}

@@ -636,6 +636,8 @@ nav {
 
 .form-success,
 .form-error {
+    display: none;
+
     width: 100%;
 
     text-align: center;
@@ -643,6 +645,13 @@ nav {
     font-size: 14px;
 
     line-height: 1.5;
+
+    margin-top: 5px;
+}
+
+.form-success.show,
+.form-error.show {
+    display: block;
 }
 
 
