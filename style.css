@@ -1034,6 +1034,8 @@ body.modal-open {
         margin-bottom: 30px;
 
         text-align: center;
+
+        white-space: normal;
     }
 
 
