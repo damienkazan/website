@@ -222,6 +222,19 @@ nav {
     color: #fff;
 }
 
+.about-link {
+    color: #fff;
+
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    transition: .25s;
+}
+
+.about-link:hover {
+    color: #cfcfcf;
+}
+
 .scroll-indicator {
     margin-top: 70px;
 
