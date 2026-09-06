@@ -20,30 +20,60 @@ projects.forEach(project=>{
     });
 });
 
-// ---- VIDEO MODAL ----
+// ---- VIDEO MODAL (Vimeo) ----
 const videoModal = document.getElementById("videoModal");
-const modalVideo = document.getElementById("modalVideo");
+const modalVideoEmbed = document.getElementById("modalVideoEmbed");
 const videoModalClose = document.getElementById("videoModalClose");
 
-function openVideoModal(src){
-    if(!src) return;
-    modalVideo.setAttribute("src", src);
+let currentRatio = 56.25;
+
+function sizeVideoEmbed(ratio){
+    const maxWidth = Math.min(window.innerWidth * 0.84, 1100);
+    const maxHeight = window.innerHeight * 0.8;
+
+    let width = maxWidth;
+    let height = width * (ratio / 100);
+
+    if(height > maxHeight){
+        height = maxHeight;
+        width = height / (ratio / 100);
+    }
+
+    modalVideoEmbed.style.width = width + "px";
+    modalVideoEmbed.style.height = height + "px";
+}
+
+function openVideoModal(vimeoId, ratio){
+    if(!vimeoId) return;
+
+    currentRatio = parseFloat(ratio) || 56.25;
+
+    modalVideoEmbed.innerHTML =
+        '<iframe src="https://player.vimeo.com/video/' + vimeoId +
+        '?title=0&byline=0&portrait=0&autoplay=1" frameborder="0" ' +
+        'allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+
+    sizeVideoEmbed(currentRatio);
+
     videoModal.classList.add("active");
     document.body.classList.add("modal-open");
-    modalVideo.play();
 }
 
 function closeVideoModal(){
-    modalVideo.pause();
-    modalVideo.removeAttribute("src");
-    modalVideo.load();
+    modalVideoEmbed.innerHTML = "";
     videoModal.classList.remove("active");
     document.body.classList.remove("modal-open");
 }
 
+window.addEventListener("resize", ()=>{
+    if(videoModal.classList.contains("active")){
+        sizeVideoEmbed(currentRatio);
+    }
+});
+
 projects.forEach(project=>{
     project.addEventListener("click", ()=>{
-        openVideoModal(project.getAttribute("data-video"));
+        openVideoModal(project.getAttribute("data-video"), project.getAttribute("data-ratio"));
     });
 });
 
