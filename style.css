@@ -105,6 +105,8 @@ nav {
 
     align-items: flex-start !important;
 
+    justify-content: center !important;
+
     padding: 190px 8% 60px !important;
 
     margin: 0 !important;
@@ -161,6 +163,8 @@ nav {
     bottom: auto !important;
 
     transform: none !important;
+
+    text-align: center !important;
 }
 
 .eyebrow {
@@ -171,29 +175,6 @@ nav {
     margin-bottom: 25px;
 
     font-size: 13px;
-}
-
-.hero h1 {
-    position: relative !important;
-
-    z-index: 5 !important;
-
-    display: block !important;
-
-    width: 100% !important;
-
-    font-size: 92px !important;
-
-    line-height: 1 !important;
-
-    font-weight: 800 !important;
-
-    margin: 0 0 28px !important;
-
-    padding: 0 !important;
-
-    top: auto !important;
-    transform: none !important;
 }
 
 .subtitle {
@@ -791,12 +772,6 @@ body.modal-open {
         padding: 120px 8% 50px !important;
     }
 
-    .hero h1 {
-        font-size: 54px !important;
-
-        margin-bottom: 45px !important;
-    }
-
     .subtitle {
         margin-top: 0 !important;
     }
@@ -925,22 +900,6 @@ body.modal-open {
         letter-spacing: 7px;
 
         margin-bottom: 45px;
-    }
-
-    .hero h1 {
-        width: 100% !important;
-
-        font-size: 54px !important;
-
-        line-height: .98 !important;
-
-        margin: 0 0 38px !important;
-
-        padding: 0 !important;
-
-        text-align: center;
-
-        transform: none !important;
     }
 
     .subtitle {
